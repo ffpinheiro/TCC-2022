@@ -1,0 +1,36 @@
+body{
+    background-color:#99aff0;
+}
+
+nav{
+    text-align:center;
+    background-color:#fff;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: x-large;
+}
+
+main{
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+div{
+    display:inline-block;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: xx-large;
+    margin: 10px;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+a:hover{
+    color:red;
+}

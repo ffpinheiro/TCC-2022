@@ -1,11 +1,44 @@
 
  var res = document.getElementById("resultado");
 
- //ALGEBRA LINEAR -----------------------------------------------------------------------------------------------------------------------------------------------
+ // ALGEBRA LINEAR -----------------------------------------------------------------------------------------------------------------------------------------------
 
- //TRIGONOMETRIA ----------------------------------------------------------------------------------------------------------------------------------------------------
+ // TRIGONOMETRIA ----------------------------------------------------------------------------------------------------------------------------------------------------
 
- //PROGRESSOES ARITMETICAS E GEOMETRICAS (TERMO GERAL E SOMA DOS TERMOS) ----------------------------------------------------------------------------------------------------------------------------------------------------
+ // ALGEBRA (DISTANCIA, PONTO MEDIO, DECLIVE E ANGULO DE 2 PONTOS, TEOREMA DE PITAGORAS, EIXO DE SIMETRIA DE UMA PARABOLA E FORMULA QUADRATICA) --------------------------------------------------------------------------
+
+
+ function geoAnalitica(x1,x2,y1,y2){
+
+  let distancia = Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
+  let pontomedio = ((x1+x2)/2)+", "+(y1+y2)/2;
+  let declive = (y2-y1)/(x2-x1);
+  let angulo = Math.atan(declive)*(180/Math.PI);
+
+  return ("Distância: "+distancia+"<br> Ponto Médio: "+pontomedio+"<br> Declive: "+declive+"<br> Ângulo: "+angulo+"°");
+ }
+
+ function Pitagoras(b,c){
+   return Math.sqrt(Math.pow(b,2)+Math.pow(c,2));
+ }
+
+
+ function eixoSimetriaParabola(a,b){
+   return ((-1*b)/(2*a));
+ }
+
+ function quadratica(a,b,c){
+
+ let delta = b * b - 4 * a * c;
+
+ let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+ let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+
+ return ("x1: "+x1+"<br> x2: "+x2);
+ }
+ 
+
+ // PROGRESSOES ARITMETICAS E GEOMETRICAS (TERMO GERAL E SOMA DOS TERMOS) ----------------------------------------------------------------------------------------------------------------------------------------------------
 
  
  function enesimoTermoPA(ak,n,r,k){
@@ -61,7 +94,7 @@
    */
  }
 
- //GEOMETRIA PLANA (AREAS DO TRIANGULO, RETANGULO, TRAPEZIO, QUADRADO, LOSANGO, HEXAGONO E CIRCULO, PERIMETROS E APOTEMAS) --------------------------------------------------------------------------------
+ // GEOMETRIA PLANA (AREAS DO TRIANGULO, RETANGULO, TRAPEZIO, QUADRADO, LOSANGO, HEXAGONO E CIRCULO, PERIMETROS E APOTEMAS) --------------------------------------------------------------------------------
 
  function areaTriangulo(b,h){
   return (b*h)/2;
@@ -164,7 +197,7 @@ function apotemaHexagono(l){
   // l = lado
 }
  
- //GEOMETRIA ESPACIAL (FORMULA DE EULER, VOLUME E AREA DA SUPERFICIE DOS PRISMAS, PIRAMIDES, CILINDROS, ESFERA E CONE (GERATRIZ)) --------------------------------------------------------------------------------
+ // GEOMETRIA ESPACIAL (FORMULA DE EULER, VOLUME E AREA DA SUPERFICIE DOS PRISMAS, PIRAMIDES, CILINDROS, ESFERA E CONE (GERATRIZ)) --------------------------------------------------------------------------------
 
 
  function faceEuler(a,v){
@@ -272,7 +305,7 @@ function areaEsfera (r){
   // r = raio
 }
 
- //ESTATISTICA (ROL, MEDIA, MEDIANA, VARIANCIA E DESVIO PADRAO) ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ // ESTATISTICA (ROL, MEDIA, MEDIANA, VARIANCIA E DESVIO PADRAO) ----------------------------------------------------------------------------------------------------------------------------------------------------------------
  
  function estatistica(){
         
@@ -318,7 +351,7 @@ Variancia = salvar/limite
 Desvio padrao = sqrt(variancia)
 */
 
- //ANALISE COMBINATORIA (FATORIAL, COMBINACAO, ARRANJO E PERMUTACAO) ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ // ANALISE COMBINATORIA (FATORIAL, COMBINACAO, ARRANJO E PERMUTACAO) ----------------------------------------------------------------------------------------------------------------------------------------------------------------
  
  function fat(num) {
     
@@ -356,7 +389,7 @@ function permutacaoSimples(n){
    */
 }
 
-//PROBABILIDADE (PROBABILIDADE GERAL, INTERSECCAO, UNIAO E PROBABILIDADE BINOMIAL) ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+// PROBABILIDADE (PROBABILIDADE GERAL, INTERSECCAO, UNIAO E PROBABILIDADE BINOMIAL) ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 function probabilidade(e,s){
   return (e/s);
@@ -574,7 +607,55 @@ function energiaPotElastica(K,x){
   */
 }
 
-//TERMOLOGIA (CONVERSAO DE UNIDADES, DILATACAO TERMICA, QUANTIDADE DE CALOR E CAPACIDADE TERMICA) --------------------------------------------------------------------------------------------------------------------
+
+// OUTRAS FORMULAS DA MECANICA CLASSICA E FISICA (ENERGIA CINETICA, MOMENTO, TRABALHO, DENSIDADE E PRESSAO) -----------------------------------------------------------------------------------------------------------------------
+
+function energiaCinetica(m,v){
+  return (1/2*m*v*v);
+
+  /*
+  m = massa
+  v = velocidade
+  */
+}
+
+function momento(m,v){
+  return (m*v);
+
+  /*
+  m = massa
+  v = velocidade
+  */
+}
+
+function trabalho(f,d){
+  return (f*d);
+
+  /*
+  f = forca
+  d = deslocamento
+  */
+}
+
+function densidade(m,v){
+  return (m/v);
+
+  /*
+  m = massa
+  v = volume
+  */
+}
+
+function pressao(f,a){
+  return (f/a);
+
+  /*
+  f = forca
+  a = area
+  */
+}
+
+// TERMOLOGIA (CONVERSAO DE UNIDADES, DILATACAO TERMICA, QUANTIDADE DE CALOR E CAPACIDADE TERMICA) --------------------------------------------------------------------------------------------------------------------
 
 function celsiusParaFahrenheit(c){
   return (c*(9/5))+32;
@@ -682,7 +763,7 @@ function indiceRefracao(v){
 
 // ONDULATORIA (PERIODO E VELOCIDADE DE PROPAGACAO)
 
-function velPropagacaoOndaLinear(T, m, l){
+function velPropOndaLinear(T, m, l){
   return Math.sqrt(T/(m/l));
 
   /*
@@ -707,7 +788,7 @@ function velPropagacao(l,f){
   */
 }
 
-// ELETROSTATICA (QUANTIDADE DE CARGA ELETRICA, LEI DE COULOMB E CAMPO ELETRICO)
+// ELETROSTATICA (QUANTIDADE DE CARGA ELETRICA, LEI DE COULOMB E CAMPO ELETRICO) ---------------------------------------------------------------------------------------------------------------------------------------
 
 function qtdCargaEletrica(n){
   return n*(1.6*Math.pow(10, -19));
@@ -725,7 +806,7 @@ function leiCoulomb(q1, q2, d){
   */
 }
 
-function campoEletrico (F, q){
+function campoEletrico(F, q){
 
   return (F/q);
 
@@ -735,5 +816,35 @@ function campoEletrico (F, q){
   */
 }
 
-//FAVOR SUBSTITUIR O CODIGO 'return' PELO CODIGO 'res.innerHTML =' QUANDO FOR NECESSARIO TESTAR
-//ALEM DISSO, ACRESCENTAR AS FUNCOES AS DEFINICOES DAS VARIAVEIS, EXEMPLO: 'var n = parseFloat(document.getElementById("n").value);'
+// EDUCACAO FISICA (IMC, TORNEIO MATA-MATA E TORNEIO ROUND-ROBIN)
+
+function imc(p,a){
+
+  return (p/(a*a));
+
+  /*
+  p = peso
+  a = altura
+  */
+}
+
+function mataMata(n){
+
+  return (n-1);
+
+  /*
+  n = numero de times participantes
+  */
+}
+
+function roundRobin(n){
+
+  return combinacao(n,2);
+
+  /*
+  n = numero de times participantes
+  */
+}
+
+// FAVOR SUBSTITUIR O CODIGO 'return' PELO CODIGO 'res.innerHTML =' QUANDO FOR NECESSARIO TESTAR
+// ALEM DISSO, ACRESCENTAR AS FUNCOES AS DEFINICOES DAS VARIAVEIS, EXEMPLO: 'var n = parseFloat(document.getElementById("n").value);'

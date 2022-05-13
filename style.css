@@ -11,10 +11,19 @@ nav{
 }
 
 main{
-    text-align: center;
     margin-top: 5%;
     margin-left: 30%;
     margin-right: 30%;
+    background-color: gray;
+}
+
+footer{
+    text-align:left;
+    background-color:#fff;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: x-large;
+    margin-top: 30%;
 }
 
 div{
@@ -33,4 +42,12 @@ a{
 
 a:hover{
     color:red;
+}
+
+div#texto{
+    width: 50%;
+}
+
+div#calc{
+
 }

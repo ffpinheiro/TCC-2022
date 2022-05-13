@@ -11,9 +11,10 @@ nav{
 }
 
 main{
+    text-align: center;
     margin-top: 5%;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 20%;
+    margin-right: 20%;
     background-color: gray;
 }
 
@@ -45,9 +46,14 @@ a:hover{
 }
 
 div#texto{
-    width: 50%;
+    width: 40%;
 }
 
 div#calc{
+    width: 40%;
+    padding-top: 5%;
+}
 
+input{
+    margin-bottom: 5%;
 }

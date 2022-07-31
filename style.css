@@ -15,7 +15,6 @@ main{
     margin-top: 5%;
     margin-left: 20%;
     margin-right: 20%;
-    background-color: gray;
 }
 
 footer{
@@ -45,13 +44,18 @@ a:hover{
     color:red;
 }
 
-div#texto{
+div#calc{
+    float: left;
     width: 40%;
+    height: 40%;
+    margin-left: 5%;
 }
 
-div#calc{
+div#texto{
+    float: left;
     width: 40%;
-    padding-top: 5%;
+    height: 70%;
+    margin-left: 5%;
 }
 
 

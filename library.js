@@ -3,41 +3,6 @@
 
  // ALGEBRA LINEAR -----------------------------------------------------------------------------------------------------------------------------------------------
 
- // TRIGONOMETRIA ----------------------------------------------------------------------------------------------------------------------------------------------------
-
- // ALGEBRA (DISTANCIA, PONTO MEDIO, DECLIVE E ANGULO DE 2 PONTOS, TEOREMA DE PITAGORAS, EIXO DE SIMETRIA DE UMA PARABOLA E FORMULA QUADRATICA) --------------------------------------------------------------------------
-
-
- function geoAnalitica(x1,x2,y1,y2){
-
-  let distancia = Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
-  let pontomedio = ((x1+x2)/2)+", "+(y1+y2)/2;
-  let declive = (y2-y1)/(x2-x1);
-  let angulo = Math.atan(declive)*(180/Math.PI);
-
-  return ("Distância: "+distancia+"<br> Ponto Médio: "+pontomedio+"<br> Declive: "+declive+"<br> Ângulo: "+angulo+"°");
- }
-
- function Pitagoras(b,c){
-   return Math.sqrt(Math.pow(b,2)+Math.pow(c,2));
- }
-
-
- function eixoSimetriaParabola(a,b){
-   return ((-1*b)/(2*a));
- }
-
- function quadratica(a,b,c){
-
- let delta = b * b - 4 * a * c;
-
- let x1 = (-b + Math.sqrt(delta)) / (2 * a);
- let x2 = (-b - Math.sqrt(delta)) / (2 * a);
-
- return ("x1: "+x1+"<br> x2: "+x2);
- }
- 
-
  // PROGRESSOES ARITMETICAS E GEOMETRICAS (TERMO GERAL E SOMA DOS TERMOS) ----------------------------------------------------------------------------------------------------------------------------------------------------
 
  
@@ -485,6 +450,86 @@ function radianosParaGraus(alfa){
 function comprimentoArco(alfa, r){
   return alfa*r*(Math.PI/180);
 }
+
+// GEOMETRIA ANALITICA DE PONTO E RETA (TEOREMA DE PITAGORAS, DISTANCIA PONTO PONTO, PONTO MEDIO, DISTANCIA PONTO RETA, ALINHNAMENTO DE 3 PONTOS, EQUACAO DA RETA DADO 2 PONTOS OU 1 PONTO E 1 ANGULO, RETAS PARALELAS/PERPENDICULARES, BARICENTRO DE TRIANGULO) --------------------------------------------------------------------------
+
+
+ function Pitagoras(b,c){
+  return Math.sqrt(Math.pow(b,2)+Math.pow(c,2));
+}
+ 
+ function distPontoPonto(x1,x2,y1,y2){
+
+  let distancia = Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
+  let pontomedio = ((x1+x2)/2)+", "+(y1+y2)/2;
+  let declive = (y2-y1)/(x2-x1);
+  let angulo = Math.atan(declive)*(180/Math.PI);
+
+  return ("Distância: "+distancia+"<br> Ponto Médio: "+pontomedio+"<br> Declive: "+declive+"<br> Ângulo: "+angulo+"°");
+ }
+
+
+ function distPontoReta(a,b,c,x0,y0){
+
+  let numerador = Math.abs(a*x0+b*y0+c);
+  let denominador = Pitagoras(a,b);
+
+  return numerador/denominador;
+ }
+
+
+ function alinhamentoPontos(xa,ya,xb,yb,xc,yc){
+
+  let det = (xa*yb+ya*xc+xb*yc-xc*yb-yc*xa-xb*ya);
+  if (det == 0){
+    return "Os pontos não formam um triângulo";
+  }else{
+    return "Os pontos formam um triângulo. Sua área é de: "+(1/2*Math.abs(det));
+  }
+  }
+
+ function equacaoReta2Pontos(x1,y1,x2,y2){
+ 
+  let a = y1-y2;
+  let b = x2-x1;
+  let c = x1*y2-x2*y1;
+  return a+"x + ("+b+"y) + ("+c+")";
+ }
+
+
+ function equacaoReta1Ponto1Angulo(xa,ya,a){
+   return "y = "+tan(a)+"x + ("+(tan(a)*xa*-1+ya)+")";
+ }
+
+ function retaParalelaReduzida(m,x0,y0){
+  
+  let coefangular=(y0-m*x0);
+  return "y = "+m+"x + ("+coefangular+")";
+ }
+
+ function retaParalelaGeral(a,b,x0,y0){
+
+  let coefangular = (-1*(a*x0+b*y0));
+  return a+"x + ("+b+"y)"+" + ("+coefangular+")"+" = 0";  
+ }
+
+ function retaPerpReduzida(m,x0,y0){
+  let coefangular=(1/m*x0+y0);
+  return "y = "+(-1/m)+"x + ("+coefangular+")";
+
+ }
+
+ function retaPerpGeral(a,b,x0,y0){
+ 
+  let coefangular = (-1*(b*x0-a*y0));
+  return b+"x + ("+(a*-1)+"y)"+" + ("+coefangular+")"+" = 0";
+ }
+
+
+function baricentroTriangulo(xa,ya,xb,yb,xc,yc){
+  return (xa+xb+xc/3)+", "+(ya+yb+yc/3);
+}
+
 
 // CINEMATICA (MU, MUV, MRU, MRUV e MCU) -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

@@ -426,6 +426,66 @@ p = probabilidade de sucesso
 
 }
 
+
+// TRIGONOMETRIA (SENO, COSSENO, TANGENTE, LEI DOS SENOS, LEI DOS COSSENOS, ANGULO ENTRE PONTEIROS DE RELOGIO E CONVERSAO DE RADIANOS/GRAUS) ------------------------------------------------------------------------
+
+
+ function sin(x){
+  return Math.sin(x*(Math.PI/180));
+}
+
+function cos(x){
+  return Math.cos(x*(Math.PI/180));
+}
+
+function tan(x){
+  return Math.tan(x*(Math.PI/180));
+}
+
+
+function leiSenos(b, sinB, sinA){
+  return (b*sinA)/(sinB);
+}
+
+function leiCossenos(b,c,alfa){
+  return (Math.sqrt(b*b+c*c-2*b*c*(cos(alfa))));
+}
+
+function anguloMenorPonteiros(h, min){
+  
+  let x = Math.abs((60*h-11*min))/2;
+
+  if (x > 180){
+    return (360-x);
+  }else{
+    return x;
+  }
+}
+
+function tipoGrau(x){
+  if (x = 90){
+    return "reto";
+  }else if (x = 180){
+    return "raso";
+  }else if (x>90){
+  return "obtuso";
+  }else if (x<90){
+  return "agudo";
+  }
+}
+
+function grausParaRadianos(alfa){
+  return alfa*(Math.PI/180);
+}
+
+function radianosParaGraus(alfa){
+  return alfa*(180/Math.PI);
+}
+
+function comprimentoArco(alfa, r){
+  return alfa*r*(Math.PI/180);
+}
+
 // CINEMATICA (MU, MUV, MRU, MRUV e MCU) -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 

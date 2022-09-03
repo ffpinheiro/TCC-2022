@@ -530,6 +530,59 @@ function baricentroTriangulo(xa,ya,xb,yb,xc,yc){
   return (xa+xb+xc/3)+", "+(ya+yb+yc/3);
 }
 
+// GEOMETRIA ANALITICA DE CIRCUNFERENCIA (EQUACAO DA CIRCUNFERENCIA, POSICAO RELATIVA ENTRE PONTO E CIRCUNFERENCIA, RETA E CIRCUNFERENCIA E 2 CIRCUNFERENCIAS)
+
+
+function equacaoCircunferencia(xc,yc,d){
+  
+  let centro = (-1*xc)+", "+(-1*yc);
+  let raio = Math.sqrt(d);
+
+  return ("Centro: "+centro+"<br> Raio: "+raio);
+}
+
+function posRelativaPontoCirc(xc,yc,d,x0,y0){
+ 
+  let calculo = (Math.pow((x0+xc),2)+Math.pow((y0+yc),2));
+  if (calculo > d){
+    return "O ponto é externo";
+  }else if(calculo < d){
+    return "O ponto é interno";
+  }else if(calculo == d){
+    return "O ponto pertence a circunferência";
+  }
+}
+
+function posRelativaRetaCirc(a,b,c,x0,y0,r){
+
+
+  let ds = distPontoReta(a,b,c,x0,y0);
+  if (ds > r){
+    return "A reta não toca a circunferência";
+  }else if(ds < r){
+    return "A reta toca a circunferência em 2 pontos";
+  }else if(ds == r){
+    return "A reta toca a circunferência em 1 ponto";
+  }
+  
+}
+
+function posRelativaCircCirc(xc1,yc1,xc2,yc2,r1,r2){
+  
+  let distcentros = distPontoPonto(xc1, xc2, yc1, yc2);
+  if (distcentros < Math.abs(r1-r2)){
+    return "A circunferência é interna";
+  }else if(distcentros == Math.abs(r1-r2)){
+    return "A circunferência é tangente interna";
+  }else if(distcentros < (r1+r2)){
+    return "As circunferências são secantes";
+  }else if(distcentros == (r1+r2)){
+    return "A circunferência é tangente externa";
+  }else if(distcentros >(r1+r2)){
+    return "A circunferência é externa";
+  }
+}
+
 
 // CINEMATICA (MU, MUV, MRU, MRUV e MCU) -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

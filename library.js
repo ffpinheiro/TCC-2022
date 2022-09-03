@@ -921,6 +921,105 @@ function campoEletrico(F, q){
   */
 }
 
+// ELETRODINAMICA (CORRENTE ELETRICA, PRIMEIRA E SEGUNDA LEIS DE OHM, POTENCIA ELETRICA, ENERGIA ELETRICA, RESISTENCIA EQUIVALENTE EM SERIE E PARALELO)
+
+function correnteEletrica(Q, t){
+  return (Q/t);
+
+  /*
+  Q = quantidade de carga eletrica
+  t = intervalo de tempo
+
+  */
+}
+
+function primeiraLeiOhm(R, i){
+  return (R*i);
+
+  /*
+  R = resistencia
+  i = corrente
+  */
+}
+
+function segundaLeiOhm(p,l,A){
+return ((p*l)/A);
+
+/*
+p = resistividade
+l = comprimento do fio
+A = area transversal do fio (bitola)
+*/
+}
+
+function potenciaEletrica(i, U){
+  return (i*U);
+  /*
+  i = corrente
+  U = tensao
+  */
+}
+
+function potenciaEletricaSemTensao(R, i){
+  return (R*i*i);
+
+  /*
+  R = resistencia
+  i = corrente
+  */
+}
+
+function potenciaEletricaSemCorrente(U,R){
+
+  return ((U*U)/R);
+
+  /*
+  U = tensao
+  R = resistencia
+  */
+}
+
+function energiaEletrica(P,t){
+  return P*t;
+
+  /*
+  P = potencia
+  t = intervalo de tempo
+  */
+}
+
+function ReqSerie(){
+  
+
+  var Req = parseInt(0);
+  var limite = prompt("Digite a quantidade de resistores");
+  
+  for(var i = 0; i < limite; i++){
+     var R = parseInt((prompt("Digite o valor do resistor")));
+   
+     var Req = Req + R;
+
+  }
+
+  return ("O valor da resistência equivalente é de "+Req+" Ohms");
+}
+
+
+function ReqParalelo(){
+  var Req = parseInt(0);
+  var limite = prompt("Digite a quantidade de resistores");
+  
+  for(var i = 0; i < limite; i++){
+     var R = parseInt((prompt("Digite o valor do resistor")));
+   
+     var Req = Req + (1/R);
+
+  }
+
+  return ("O valor da resistência equivalente é de "+Math.pow(Req,-1))+" Ohms";
+
+}
+
 // EDUCACAO FISICA (IMC, TORNEIO MATA-MATA E TORNEIO ROUND-ROBIN)
 
 function imc(p,a){

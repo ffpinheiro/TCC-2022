@@ -45,22 +45,7 @@ a:hover{
 
 div#calc{
     float: left;
-    width: 40%;
-    height: 40%;
-    margin-left: 5%;
-}
-
-div#texto{
-    float: left;
-    width: 40%;
-    height: 70%;
-    margin-left: 5%;
-}
-
-
-
-li{
-    text-align:left;
+    width: 100%;
 }
 
 .indice{

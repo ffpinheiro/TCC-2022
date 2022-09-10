@@ -1,0 +1,81 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Combinação Simples</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html">Página inicial</a>
+		</nav>
+	</header>
+	
+	<main>
+		<h1>Combinação Simples</h1>
+		
+		<div id="calc">
+			<h4>Requisitos </h4>
+			
+				
+                Fatorial
+
+                <h4> Usos </h4>
+			    Probabilidade Binomial <br>
+               Torneio Round-Robin
+			
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/75d65e51bb970fc86a2f9f7a18ed600f7ff951d4"> <br>
+
+		A combinação simples é o número de grupos diferentes que podem ser formados utilizando subgrupos de tamanho s, retirados de um grupo total de n elementos, quando a 
+		ordem em que se encontram os elementos não altera o resultado.  <br>
+		Exemplo: combinação de 8 elementos organizados 3 a 3 = 8! / (3! × (8 - 3)!) = 8! / (3! × 5!) = (8 × 7 × 6) / (3 × 2 × 1) = 56
+		</div>
+
+		<div id="calc">
+			Número de elementos (n): <input type="number" placeholder="n" id="n"> <br>
+            Tamanho dos subconjuntos (s) <input type="number" placeholder="s" id="p">
+			<button onclick="resultado(n,p)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://brasilescola.uol.com.br/matematica/combinacao-simples.htm"> <img src="../../imagens/brescola.png" height="10%"> </a> <br> <br>
+			<a href="https://www.infoescola.com/matematica/combinacao-simples/"> <img src="../../imagens/infoescola.png" height="10%"> </a>
+		</div>
+		
+		
+		
+	</main>
+  
+
+
+    <script src="../../library.js"></script>
+    
+    <script> function resultado(n,p){
+        var n = parseFloat(document.getElementById("n").value);
+        var p = parseFloat(document.getElementById("p").value);
+        var res = document.getElementById("resultado");
+        res.innerHTML = combinacao(n,p);
+    }</script>
+
+    
+
+</body>
+
+</html>

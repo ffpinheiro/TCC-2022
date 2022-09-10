@@ -1,0 +1,79 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Fatorial</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html">Página inicial</a>
+		</nav>
+	</header>
+	
+	<main>
+		<h1>Fatorial</h1>
+		
+		<div id="calc">
+			<h4>Requisitos </h4>
+			
+				
+				Multiplicação
+
+                <h4> Usos </h4>
+
+                Combinação <br>
+                Arranjo <br>
+                Permutação <br>
+			
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9c9ef8cf0798ee527186247d6ec5eb2e5f4527fd"> <br>
+
+		O fatorial de um número n é representado por n! e calculado através do produto de todos os números inteiros positivos menores ou iguais a n. <br>
+		Exemplo: 5! = 5 × 4 × 3 × 2 × 1 = 120
+		</div>
+
+		<div id="calc">
+			Número: <input type="number" placeholder="número" id="num">
+			<button onclick="resultado(num)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://www.todamateria.com.br/fatorial/"> <img src="../../imagens/todamateria.png" height="10%"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/matematica/fatorial.htm"> <img src="../../imagens/brescola.png" height="10%"> </a> <br> <br>
+			<a href="https://www.infoescola.com/matematica/fatorial/"> <img src="../../imagens/infoescola.png" height="10%"> </a>
+		</div>
+		
+		
+		
+	</main>
+  
+
+
+    <script src="../../library.js"></script>
+	<script> function resultado(num){
+        var num = parseFloat(document.getElementById("num").value);
+        var res = document.getElementById("resultado");
+        res.innerHTML = fat(num);
+    }</script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Permutação Simples </title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html">Página inicial</a>
+		</nav>
+	</header>
+	
+	<main>
+		<h1>Permutação Simples</h1>
+		
+		<div id="calc">
+			<h4>Requisitos </h4>
+			
+				
+				Fatorial
+			
+		</div>
+
+        <div id="calc">
+			<h4>Permutação Simples</h4>
+			<img src="../../imagens/permutacao.jpg" height="5%"> <br>
+
+            A permutação consiste no número de maneiras diferentes existentes para organizar um conjunto com n elementos, onde todos os elementos são distintos e não se repetem.  <br>
+            Exemplo: De quantas maneiras diferentes é possível organizar 5 cartas? Existem 5 possibilidades para a 1ª posição, 4 para a 2ª, 3 para a 3ª, 2 para a 4ª e apenas 1 para a última posição. Portanto:
+            P<sub>5</sub> = 5 × 4 × 3 × 2 × 1 = 5!
+           
+		</div>
+
+		<div id="calc">
+            Número: <input type="number" placeholder="número" id="n">
+			<button onclick="resultado(n)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://www.todamateria.com.br/permutacao/"> <img src="../../imagens/todamateria.png" height="10%"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/o-que-e/matematica/o-que-e-permutacao.htm"> <img src="../../imagens/brescola.png" height="10%"> </a> <br> <br>
+			<a href="https://www.infoescola.com/matematica/permutacao/"> <img src="../../imagens/infoescola.png" height="10%"> </a>
+		</div>
+		
+		
+		
+	</main>
+  
+
+
+    <script src="../../library.js"></script>
+	<script> function resultado(n){
+       var n = parseFloat(document.getElementById("n").value);
+        var res = document.getElementById("resultado");
+        res.innerHTML = permutacaoSimples(n);
+    }</script>
+    
+
+</body>
+
+</html>

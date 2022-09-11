@@ -1,0 +1,104 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Cone</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html">Página inicial</a>
+		</nav>
+	</header>
+	
+	<main>
+		<h1>Cone</h1>
+		
+		<div id="calc">
+			<h4>Requisitos </h4>
+			
+				
+				Geometria Plana <br>
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+		
+            O cone é um sólido geométrico, considerado um corpo redondo. Possui uma base circular unida a um determinado vértice que se encontra fora dessa base. Assim como o cilindro se apresenta de
+            forma análoga aos prismas, porém sem arestas ou vértices, o cone se apresenta análogo a pirâmide, porém sem arestas ou áreas de face. Considerando o raio da base como r e a altura do cone como h,
+            temos suas fórmulas:
+              <br> <br>
+
+            <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/725b2bd0d553eb90e20f1562add1b4a2fda24984"> <br>
+			Área da base. <br> <br>
+
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9939e45942874b1579592e41aacbe316226bad99"> <br>
+			Área do cone, onde l é a geratriz. <br> <br>
+
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/97c4fed1ecfaead926d51fd4b71343adc10e1fc8"> <br>
+			Fórmula da geratriz. <br> <br>
+
+            <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e37289a6c713019fa691146d8af5a49a81eadf16"> <br>
+            Volume.
+    
+            
+
+		</div>
+
+		<div id="calc">
+			Raio da base: <input type="number" placeholder="r" id="r"> <br>
+			Altura: <input type="number" placeholder="h" id="h"> 
+			<button onclick="resultado(r,h)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+			<div id="resultado2"></div>
+			<div id="resultado3"></div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://www.todamateria.com.br/cone/"> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/matematica/cone.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+			<a href="https://www.infoescola.com/geometria-espacial/cone/"> <img src="../../imagens/infoescola.png" id="logo"> </a>
+		</div>
+		
+		
+		
+	</main>
+  
+	
+	<footer>
+		<div><a href="../geometriaespacial.html">Geometria Espacial</a></div>
+		<div><a href="../../matematica.html">Matemática</a></div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+	<script> function resultado(num){
+        var r = parseFloat(document.getElementById("r").value);
+		var h = parseFloat(document.getElementById("h").value);
+
+        var res = document.getElementById("resultado");
+		var res2 = document.getElementById("resultado2");
+		var res3 = document.getElementById("resultado3");
+
+        res.innerHTML = "Área da Base: "+areaCirculo(r)+" u²";
+		res2.innerHTML = "Área Total: "+areaCone(h,r)+" u²";
+		res3.innerHTML = "Volume: "+volumePiramide(areaCirculo(r),h)+ " u³";
+
+    }</script>
+    
+
+</body>
+
+</html>

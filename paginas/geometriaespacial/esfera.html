@@ -1,0 +1,94 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Esfera</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html">Página inicial</a>
+		</nav>
+	</header>
+	
+	<main>
+		<h1>Esfera</h1>
+		
+		<div id="calc">
+			<h4>Requisitos </h4>
+			
+				
+				Geometria Plana <br>
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+		
+            A esfera é um sólido geométrico do grupo dos corpos redondos. É definida como o conjunto de todos os pontos que estão a mesma distância (chamada de raio ou r) de um determinado
+            ponto central. É também obtida através da rotação de um semicírculo em torno de seu eixo que contém o diâmetro. Suas principais propriedades são a área da superfície e o volume, que podem ser calculadas a partir das
+            seguintes fórmulas:
+              <br> <br>
+
+            <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/95625828c519b36791d56af65d21b8448472650d"> <br>
+			Área da superfície. <br> <br>
+
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/07808adf2ca4b2aeb69b6c15fb6251a3a3617c91"> <br>
+			Volume. 
+
+			
+            
+
+		</div>
+
+		<div id="calc">
+			Raio: <input type="number" placeholder="r" id="r">
+			<button onclick="resultado(r)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+			<div id="resultado2"></div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://www.todamateria.com.br/a-esfera-na-geometria-espacial/"> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/matematica/esfera.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+			<a href="https://www.infoescola.com/geometria-espacial/esfera/"> <img src="../../imagens/infoescola.png" id="logo"> </a>
+		</div>
+		
+		
+		
+	</main>
+  
+	
+	<footer>
+		<div><a href="../geometriaespacial.html">Geometria Espacial</a></div>
+		<div><a href="../../matematica.html">Matemática</a></div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+	<script> function resultado(r){
+        var r = parseFloat(document.getElementById("r").value);
+
+        var res = document.getElementById("resultado");
+		var res2 = document.getElementById("resultado2");
+
+        res.innerHTML = "Área da Superfície: "+areaEsfera(r)+" u²";
+		res2.innerHTML = "Volume: "+volumeEsfera(r)+" u³";
+
+    }</script>
+    
+
+</body>
+
+</html>

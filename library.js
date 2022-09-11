@@ -223,7 +223,7 @@ function volumeCuboide(a,b,c){
 }
 
 function diagonalCuboide(a,b,c){
-  return (Math.sqrt(Math.pow(a,2)+Math.pow(b,2)+Math.pow(c,2)));
+return (Math.hypot(a,b,c));
 }
 
  /*

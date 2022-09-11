@@ -257,11 +257,11 @@ function areaCilindro(h,r){
 }
 
 function geratrizCone(h,r){
-  return (Math.sqrt(Math.pow(h,2)*Math.pow(r,2)));
+  return Math.hypot(h,r);
 }
 
 function areaCone(h,r){
-  return Math.PI*r*geratrizCone(h,r);
+  return (Math.PI*r*geratrizCone(h,r))+areaCirculo(r);
 }
 
 /*

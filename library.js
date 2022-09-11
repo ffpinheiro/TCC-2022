@@ -108,6 +108,11 @@
  }
 
 
+function areaPentagono(l){
+    return(1/4*6.88190960236*(Math.pow(l,2)));
+}
+
+
  function areaHexagono(l){
   return (3*(Math.pow(l,2)) * (Math.pow(3,(1/2)))) / 2;
  }

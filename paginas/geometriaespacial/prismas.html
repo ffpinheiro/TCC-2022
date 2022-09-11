@@ -1,0 +1,124 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Prismas</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html">Página inicial</a>
+		</nav>
+	</header>
+	
+	<main>
+		<h1>Prismas</h1>
+		
+		<div id="calc">
+			<h4>Requisitos </h4>
+			
+				
+				Geometria plana			
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+			
+
+		Prisma é um tipo de sólido geométrico, consistindo em um poliedro convexo com duas bases (formadas por polígonos regulares) congruentes e paralelas, conectadas por faces planas laterais, que são paralelogramos.
+        Os principais elementos que compõem um prisma são arestas, vértices, faces (como todo sólido), base e altura. As fórmulas dos prismas são as seguintes: <br> <br>
+
+        <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b5fcd9e925df0deabd4c05471818d7ce82ddc48f"><br> 
+        Área da superfície, onde Al é a área lateral e Ab é a área da base. <br><br>
+
+        <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1367b09af9ea4ca1ee82c1f330e5292257abe7fe"><br>
+        Volume, onde Ab é a área da base e H é a altura.
+
+		</div>
+
+		<div id="calc">
+            Lado da base: <input type="number" placeholder="l" id="l"> <br>
+            Altura: <input type="number" placeholder="H" id="H"> <br>
+
+			Polígono da base: <select name="poligono" id="bases">
+                <option value="triangulo">Triângulo Equilátero</option>
+                <option value="quadrado">Quadrado</option>
+                <option value="pentagono">Pentágono regular </option>
+                <option value="hexagono">Hexágono regular</option>
+            </select>
+			<button onclick="resultado(l,H)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+            <div id="resultado2"> </div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://www.todamateria.com.br/prisma/"> <img src="../../imagens/todamateria.png" height="10%"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/matematica/prisma-1.htm"> <img src="../../imagens/brescola.png" height="10%"> </a> <br> <br>
+			<a href="https://www.infoescola.com/geometria-espacial/prisma/"> <img src="../../imagens/infoescola.png" height="10%"> </a>
+		</div>
+		
+		
+		
+	</main>
+  
+    <footer>
+		<div><a href="../geometriaespacial.html">Geometria Espacial</a></div>
+		<div><a href="../../matematica.html">Matemática</a></div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+	<script> function resultado(l,H){
+        var l = parseFloat(document.getElementById("l").value);
+        var H = parseFloat(document.getElementById("H").value);
+        var Ab = parseFloat(0);
+        var select = document.getElementById("bases");
+        var poligono = select.options[select.selectedIndex].value;
+        var res = document.getElementById("resultado");
+        var res2 = document.getElementById("resultado2");
+
+        switch(poligono){
+            case "triangulo":
+            var Ab = areaTriangEqui(l);
+            var n = 3;
+            break;
+
+            case "quadrado":
+            var Ab = areaQuadrado(l);
+            var n = 4;
+            break;
+
+            case "pentagono":
+            var Ab = areaPentagono(l);
+            var n = 5;
+            break;
+
+            case "hexagono":
+            var Ab = areaHexagono(l);
+            var n = 6;
+            break;
+
+        }
+        res.innerHTML = "Volume: "+volumePrisma(Ab,H)+" u³";
+
+        var Al = n*H*l;
+        res2.innerHTML = "Área da Superfície: "+areaPrisma(Ab,Al)+" u²";
+        
+    }</script>
+    
+
+</body>
+
+</html>

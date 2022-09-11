@@ -1,0 +1,105 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Cilindro</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html">Página inicial</a>
+		</nav>
+	</header>
+	
+	<main>
+		<h1>Cilindro</h1>
+		
+		<div id="calc">
+			<h4>Requisitos </h4>
+			
+				
+				Geometria Plana <br>
+				Prismas
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+		
+            O cilindro é um sólido geométrico, não sendo considerado um poliedro, mas sim um corpo redondo. É alongado e redondo, possuindo o mesmo diâmetro em toda a sua extensão.  O cilindro possui
+            duas bases circulares e paralelas, que possuem o mesmo raio.
+            Considerando o raio da base como r e a altura do cilindro como h, as suas fórmulas são:
+              <br> <br>
+
+            <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/725b2bd0d553eb90e20f1562add1b4a2fda24984"> <br>
+			Área da base. <br> <br>
+
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a232200da959f839a5a7d5dcff653bc2ec2847f6"> <br>
+			Área lateral. <br> <br>
+
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ca0b2a00ea4c47e1233e4637bc70c2592c38b04d"> <br>
+			Área total. <br> <br>
+
+            <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1d4495afedaf8e7b093bfcaf0b5969678df6a89e"> <br>
+            Volume.
+    
+            
+
+		</div>
+
+		<div id="calc">
+			Raio da base: <input type="number" placeholder="r" id="r"> <br>
+			Altura: <input type="number" placeholder="h" id="h"> 
+			<button onclick="resultado(r,h)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+			<div id="resultado2"></div>
+			<div id="resultado3"></div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://www.todamateria.com.br/cilindro/"> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/matematica/cilindro-2.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+			<a href="https://www.infoescola.com/geometria-espacial/cilindro/"> <img src="../../imagens/infoescola.png" id="logo"> </a>
+		</div>
+		
+		
+		
+	</main>
+  
+	
+	<footer>
+		<div><a href="../geometriaespacial.html">Geometria Espacial</a></div>
+		<div><a href="../../matematica.html">Matemática</a></div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+	<script> function resultado(num){
+        var r = parseFloat(document.getElementById("r").value);
+		var h = parseFloat(document.getElementById("h").value);
+
+        var res = document.getElementById("resultado");
+		var res2 = document.getElementById("resultado2");
+		var res3 = document.getElementById("resultado3");
+
+        res.innerHTML = "Área da Base: "+areaCirculo(r)+" u²";
+		res2.innerHTML = "Área Total: "+areaCilindro(h,r)+" u²";
+		res3.innerHTML = "Volume: "+areaCirculo(r)*h+ " u³";
+
+    }</script>
+    
+
+</body>
+
+</html>

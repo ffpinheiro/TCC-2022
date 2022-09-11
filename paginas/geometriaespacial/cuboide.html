@@ -1,0 +1,102 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Cuboide</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html">Página inicial</a>
+		</nav>
+	</header>
+	
+	<main>
+		<h1>Cuboide</h1>
+		
+		<div id="calc">
+			<h4>Requisitos </h4>
+			
+				
+				Geometria Plana <br>
+				Prismas
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+		
+            Cuboides são sólidos de 6 faces compostas por quadriláteros. Alguns casos especiais e conhecidos são o cubo, o prisma retangular e o paralelepípedo. Possuem 8 arestas e 12 vértices. Considerando
+			"a" como o comprimento, "b" a largura e "c" a altura, suas fórmulas são: <br> <br>
+
+            <img src="../../imagens/areacuboide.png" height="20px"> <br>
+			Área da superfície. <br> <br>
+
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/27587320ccd0671dd4cb31c0dbd2e8e55ee6e391"> <br>
+			Volume. <br> <br>
+
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/70d5a747a53373113dd803466bfeca5d19222852"> <br>
+			Diagonal.
+    
+            
+
+		</div>
+
+		<div id="calc">
+			Comprimento: <input type="number" placeholder="a" id="a"> <br>
+			Largura: <input type="number" placeholder="b" id="b"> <br>
+			Altura: <input type="number" placeholder="c" id="c">
+			<button onclick="resultado(a,b,c)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+			<div id="resultado2"></div>
+			<div id="resultado3"></div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://www.todamateria.com.br/paralelepipedo/"> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/matematica/paralelepipedos.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+			<a href="https://www.infoescola.com/geometria-espacial/cubo-e-paralelepipedo/"> <img src="../../imagens/infoescola.png" id="logo"> </a>
+		</div>
+		
+		
+		
+	</main>
+  
+	
+	<footer>
+		<div><a href="../geometriaespacial.html">Geometria Espacial</a></div>
+		<div><a href="../../matematica.html">Matemática</a></div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+	<script> function resultado(num){
+        var a = parseFloat(document.getElementById("a").value);
+		var b = parseFloat(document.getElementById("b").value);
+		var c = parseFloat(document.getElementById("c").value);
+
+        var res = document.getElementById("resultado");
+		var res2 = document.getElementById("resultado2");
+		var res3 = document.getElementById("resultado3");
+
+        res.innerHTML = "Área da Superfície: "+areaCuboide(a,b,c)+" u²";
+		res2.innerHTML = "Volume: "+volumeCuboide(a,b,c)+" u³";
+		res3.innerHTML = "Diagonal: "+diagonalCuboide(a,b,c)+ " u";
+
+    }</script>
+    
+
+</body>
+
+</html>

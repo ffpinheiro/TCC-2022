@@ -1,0 +1,107 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Tetraedro</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html">Página inicial</a>
+		</nav>
+	</header>
+	
+	<main>
+		<h1>Tetraedro</h1>
+		
+		<div id="calc">
+			<h4>Requisitos </h4>
+			
+				
+				Geometria Plana <br>
+                Pirâmides
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+		
+            O tetraedro ou pirâmide triangular é um poliedro composto por quatro faces, sendo todas elas triângulos equiláteros. Possui 4 vértices e 6 arestas, sendo um sólido platônico. 
+            Considerando "a" como o lado da base, suas fórmulas são: <br> <br>
+
+            <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c7fecd7c7d1a66e9ab0aa7ef964ff5679b20941c"> <br>
+			Área da base. <br> <br>
+
+            <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1243d6c349c1e48bcd5c017147580b957c9637cc"> <br>
+			Altura. <br> <br>
+
+            <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1107498be9676052a8117e8f4ce8e3f62989ba51"> <br>
+            Área da superfície. <br> <br>
+
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5fa2af66a67ba07a915aefa287acbfdd800ad28b"> <br>
+			Volume.
+    
+            
+
+		</div>
+
+		<div id="calc">
+			Lado da base: <input type="number" placeholder="a" id="l"> 
+			
+			<button onclick="resultado(l)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+			<div id="resultado2"></div>
+			<div id="resultado3"></div>
+            <div id="resultado4"></div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			
+			<a href="https://brasilescola.uol.com.br/matematica/os-solidos-platao.htm#Tetraedro+regular"> <img src="../../imagens/brescola.png" id="logo"> </a> 
+			
+		</div>
+		
+		
+		
+	</main>
+  
+	
+    <footer>
+		<div><a href="../geometriaespacial.html">Geometria Espacial</a></div>
+		<div><a href="../../matematica.html">Matemática</a></div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+	<script> function resultado(l){
+        var l = parseFloat(document.getElementById("l").value);
+
+
+        var res = document.getElementById("resultado");
+		var res2 = document.getElementById("resultado2");
+		var res3 = document.getElementById("resultado3");
+        var res4 = document.getElementById("resultado4");
+        var Ab = areaTriangEqui(l);
+
+        res.innerHTML = "Área da Base: "+Ab+" u²";
+		res2.innerHTML = "Altura: "+alturaTetraedro(l)+" u";
+        res3.innerHTML = "Área da Superfície: "+(Ab*4)+" u²";
+		res4.innerHTML = "Volume: "+volumeTetraedro(Ab,l)+ " u³";
+
+    }</script>
+    
+
+</body>
+
+</html>

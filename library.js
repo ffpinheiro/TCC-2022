@@ -252,6 +252,10 @@ function volumePiramide(Ab,H){
   */
 }
 
+function areaCilindro(h,r){
+  return 2*areaCirculo(r)+2*Math.PI*r*h;
+}
+
 function geratrizCone(h,r){
   return (Math.sqrt(Math.pow(h,2)*Math.pow(r,2)));
 }

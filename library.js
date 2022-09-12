@@ -383,6 +383,10 @@ function probUniao(Pa,Pb){
   return (Pa+Pb) - probInter(Pa,Pb);
 }
 
+function probCondicional(Pa,Pb){
+  return (Pa*Pb)/Pb;
+}
+
  /*
   Pa = probabilidade do evento A
   Pb = probabilidade do evento B

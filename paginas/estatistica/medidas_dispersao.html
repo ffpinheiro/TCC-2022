@@ -1,0 +1,98 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Medidas de dispersão</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html">Página inicial</a>
+		</nav>
+	</header>
+	
+	<main>
+		<h1>Medidas de dispersão</h1>
+		
+		<div id="calc">
+			<h4>Requisitos </h4>
+			
+				
+				Princípios da estatística <br>
+                Medidas de posição
+
+                
+			
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+			
+
+		As medidas de dispersão são complementares às medidas de posição, pois fornecem informações que não são visíveis na média, moda e mediana. O objetivo das medidas de dispersão é exibir o quanto
+        os valores se diferem da média do conjunto de dados, ou em outras palavras, o quão diferente os dados são entre si. Ao utilizá-las, é possível obter informações da homogeneidade dos 
+        dados do conjunto.
+
+        <h5> Amplitude </h5>
+        A amplitude é simplesmente a diferença entre o maior e o menor valor do conjunto.
+
+        <h5> Variância </h5>
+            
+        <center> <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c2446a06b779245a22147449fc523f2b1b0013ef"> </center>
+
+        A variância é a média dos quadrados da diferença entre cada elemento do conjunto e a média aritmética do conjunto. Isso significa que, para cada elemento y<sub>i</sub> da população, é feita a
+        subtração da média do conjunto, elevado ao quadrado e somado ao total. Esse total é então dividido pela quantidade de elementos. A variância é representada por σ².
+		
+		<h5> Desvio Padrão </h5>
+
+        <center> <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cc45b72e1fd6a3de3ec4977f42367f104f57583f"> </center>
+        O desvio padrão é obtido através da raiz quadrada da variância. Essa raiz é utilizada para deixar as unidades iguais às dos elementos, o que não acontece com a variância. Um desvio padrão de 0 significa
+        que todos os elementos são iguais. Quanto mais distante de 0, mais dispersos os elementos do conjunto são.
+
+       
+
+		</div>
+
+		<div id="calc">
+			
+			<button onclick="medidasDispersao()"> Cálculo de medidas de dispersão </button>
+			<br>
+		
+			<div id="resultado"> </div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://www.todamateria.com.br/medidas-de-dispersao/"> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/matematica/medidas-dispersao-variancia-desvio-padrao.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+            <a href="https://www.infoescola.com/estatistica/medidas-de-dispersao/"> <img src="../../imagens/infoescola.png" id="logo"> </a>
+			
+		</div>
+		
+		
+		
+	</main>
+  
+	
+	<footer>
+		<div><a href="../estatistica.html">Estatística</a></div>
+		<div><a href="../../matematica.html">Matemática</a></div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+
+    
+
+</body>
+
+</html>

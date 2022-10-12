@@ -59,7 +59,10 @@
 
 		<div id="calc">
 			
-			<button onclick="medidasDispersao()"> Cálculo de medidas de dispersão </button>
+			População: <br>
+			<textarea id="pop" rows="5" cols="60" name="text"></textarea>
+   
+    		<br> <button onclick="resultado(pop)"> Calcular </button>
 			<br>
 		
 			<div id="resultado"> </div>
@@ -90,6 +93,12 @@
 
 
     <script src="../../library.js"></script>
+
+	<script> function resultado(pop){
+        var pop = (document.getElementById("pop").value);
+        var res = document.getElementById("resultado");
+        res.innerHTML = dispersao(pop);
+    }</script>
 
     
 

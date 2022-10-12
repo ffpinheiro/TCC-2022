@@ -281,52 +281,50 @@ function areaEsfera (r){
 
  // ESTATISTICA (ROL, MEDIA, MEDIANA, VARIANCIA E DESVIO PADRAO) ----------------------------------------------------------------------------------------------------------------------------------------------------------------
  
-function rol(){
-  var res = document.getElementById("resultado");
-  var populacao = new Array();
-  var limite = prompt("Digite o tamanho da população (quantidade de números)");
-  
-  for(var i = 0; i < limite; i++){
-     var xi = parseInt((prompt("Digite um elemento")));
-     populacao.push(xi);
+ function principios(pop){
 
-  }
-  populacao.sort(function(a, b){return a-b});
-  res.innerHTML = ("Rol: "+populacao);
- }
 
- 
+  var populacao = pop.split(",");
 
- 
- function medidasPosicao(){
-  var res = document.getElementById("resultado");
-  var salvar = parseInt(0);
-  var populacao = new Array();
-  var limite = prompt("Digite o tamanho da população (quantidade de números)");
-  
-  for(var i = 0; i < limite; i++){
-     var xi = parseInt((prompt("Digite um elemento")));
-     populacao.push(xi);
-     var salvar = salvar + xi;
+  var salvar = 0;
 
+  var limite = populacao.length;
+
+  for(var i = 0; i < (limite); i++){
+    var salvar = (parseFloat(salvar) + parseFloat(populacao[i]));
   }
   
+  var soma = salvar;
+  
   populacao.sort(function(a, b){return a-b});
- 
+
+  var salvar = parseInt(0); 
+
+
+
+  return("Rol: "+populacao+"<br>Tamanho do conjunto: "+limite+"<br>Soma: "+soma);
+}
+
+function posicao(pop){
+
+
+  var populacao = pop.split(",");
+
+  var salvar = 0;
+
+  var limite = populacao.length;
+
+  for(var i = 0; i < (limite); i++){
+    var salvar = (parseFloat(salvar) + parseFloat(populacao[i]));
+  }
+  
+  var soma = salvar;
+  populacao.sort(function(a, b){return a-b});
+
   var media = (salvar/limite);
-  var salvar = parseInt(0);
-  
+  var salvar = parseInt(0); 
 
-  if(limite % 2 != 0){
-    var posicao = Math.ceil((limite/2));
-    var mediana = populacao[posicao-1];
-  }else{
-    var posicao = (limite/2);
-    var mediana = (populacao[posicao-1]+populacao[posicao])/2;
-  }
-  
-  
-    var modes = [], count = [], i, number, maxIndex = 0;
+  var modes = [], count = [], i, number, maxIndex = 0;
  
     for (i = 0; i < populacao.length; i += 1) {
         number = populacao[i];
@@ -342,83 +340,148 @@ function rol(){
                 modes.push(Number(i));
             }
         }
- 
-    
 
-
-  res.innerHTML = ("Rol: "+populacao+"<br><br>Média: "+media+"<br><br>Moda(s): "+modes+"<br><br>Mediana: "+mediana);
- }
-
- function medidasDispersao(){
-  var res = document.getElementById("resultado");
-  var salvar = parseInt(0);
-  var populacao = new Array();
-  var resultado = new Array();
-  var limite = prompt("Digite o tamanho da população (quantidade de números)");
-  
-  for(var i = 0; i < limite; i++){
-     var xi = parseInt((prompt("Digite um elemento")));
-     populacao.push(xi);
-     var salvar = salvar + xi;
-
-  }
-  
-  populacao.sort(function(a, b){return a-b});
- 
-  var media = (salvar/limite);
-  var salvar = parseInt(0);
-  
-
-  populacao.forEach(element => resultado.push(Math.pow((element-media),2))
-  );
-
-  resultado.forEach(element => salvar = salvar + element
-  );
-
-
-  var variancia = (salvar/limite);
-  var desviopadrao = (Math.sqrt(variancia));
-  var max = Math.max.apply(null, populacao);
-  var min = Math.min.apply(null, populacao);
-  var amplitude = max-min;
-
-  res.innerHTML = ("Rol: "+populacao)+"<br>Amplitude: "+amplitude+"<br>Variância: "+variancia+"<br>Desvio Padrão: "+desviopadrao;
- }
-
- function estatistica(){
-        
-  var salvar = parseInt(0);
-  var populacao = new Array();
-  var resultado = new Array();
-  var limite = prompt("Digite o tamanho da população (quantidade de números)");
-  
-  for(var i = 0; i < limite; i++){
-     var xi = parseInt((prompt("Digite um elemento")));
-     populacao.push(xi);
-     var salvar = salvar + xi;
-
-  }
-  
-  populacao.sort(function(a, b){return a-b});
- 
-  var media = (salvar/limite);
-  var salvar = parseInt(0);
-  
-
-  populacao.forEach(element => resultado.push(Math.pow((element-media),2))
-  );
-
-  resultado.forEach(element => salvar = salvar + element
-  );
 
 
   if(limite % 2 != 0){
-    var posicao = Math.ceil((limite/2));
-    var mediana = populacao[posicao-1];
-  }else{
-    var posicao = (limite/2);
-    var mediana = (populacao[posicao-1]+populacao[posicao])/2;
+    
+  var posicao = Math.ceil((limite/2));
+  var mediana = populacao[posicao-1]; 
+}else{ 
+  var posicao = (limite/2);
+  var m1 = parseFloat(populacao[posicao-1]);
+  var m2 = parseFloat(populacao[posicao]);
+  var mediana = (m1+m2)/2; 
+} 
+
+  
+
+  return("Rol: "+populacao+"<br>Tamanho do conjunto: "+limite+"<br>Soma: "+soma+"<br>Média: "+media+"<br>Moda(s): "+modes+"<br>Mediana: "+mediana);
+}
+
+
+function dispersao(pop){
+
+
+  var populacao = pop.split(",");
+
+  var resultado = new Array();
+
+  var salvar = 0;
+
+  var limite = populacao.length;
+
+  for(var i = 0; i < (limite); i++){
+    var salvar = (parseFloat(salvar) + parseFloat(populacao[i]));
   }
+  
+  var soma = salvar;
+  
+  populacao.sort(function(a, b){return a-b});
+
+  var media = (salvar/limite);
+  var salvar = parseInt(0); 
+
+  var modes = [], count = [], i, number, maxIndex = 0;
+ 
+    for (i = 0; i < populacao.length; i += 1) {
+        number = populacao[i];
+        count[number] = (count[number] || 0) + 1;
+        if (count[number] > maxIndex) {
+            maxIndex = count[number];
+        }
+    }
+ 
+    for (i in count)
+        if (count.hasOwnProperty(i)) {
+            if (count[i] === maxIndex) {
+                modes.push(Number(i));
+            }
+        }
+
+
+  populacao.forEach(element => resultado.push(Math.pow((element-media),2)) );
+  resultado.forEach(element => salvar = salvar + element );
+
+  if(limite % 2 != 0){
+    
+  var posicao = Math.ceil((limite/2));
+  var mediana = populacao[posicao-1]; 
+}else{ 
+  var posicao = (limite/2);
+  var m1 = parseFloat(populacao[posicao-1]);
+  var m2 = parseFloat(populacao[posicao]);
+  var mediana = (m1+m2)/2; 
+} 
+
+  var variancia = (salvar/limite); 
+  var desviopadrao = (Math.sqrt(variancia)); 
+  var amplitude = Math.max(...populacao)-Math.min(...populacao);
+
+  return("Rol: "+populacao+"<br>Tamanho do conjunto: "+limite+"<br>Soma: "+soma+"<br>Média: "+media+"<br>Moda(s): "+modes+"<br>Mediana: "+mediana+"<br>Amplitude: "+amplitude+
+  "<br>Variância: "+variancia+"<br>Desvio Padrão: "+desviopadrao);
+}
+
+ function estatistica(pop){
+
+
+  var populacao = pop.split(",");
+
+  var resultado = new Array();
+
+  var salvar = 0;
+
+  var limite = populacao.length;
+
+  for(var i = 0; i < (limite); i++){
+    var salvar = (parseFloat(salvar) + parseFloat(populacao[i]));
+  }
+  
+  var soma = salvar;
+  
+  populacao.sort(function(a, b){return a-b});
+
+  var media = (salvar/limite);
+  var salvar = parseInt(0); 
+
+  var modes = [], count = [], i, number, maxIndex = 0;
+ 
+    for (i = 0; i < populacao.length; i += 1) {
+        number = populacao[i];
+        count[number] = (count[number] || 0) + 1;
+        if (count[number] > maxIndex) {
+            maxIndex = count[number];
+        }
+    }
+ 
+    for (i in count)
+        if (count.hasOwnProperty(i)) {
+            if (count[i] === maxIndex) {
+                modes.push(Number(i));
+            }
+        }
+
+
+  populacao.forEach(element => resultado.push(Math.pow((element-media),2)) );
+  resultado.forEach(element => salvar = salvar + element );
+
+  if(limite % 2 != 0){
+    
+  var posicao = Math.ceil((limite/2));
+  var mediana = populacao[posicao-1]; 
+}else{ 
+  var posicao = (limite/2);
+  var m1 = parseFloat(populacao[posicao-1]);
+  var m2 = parseFloat(populacao[posicao]);
+  var mediana = (m1+m2)/2; 
+} 
+
+  var variancia = (salvar/limite); 
+  var desviopadrao = (Math.sqrt(variancia)); 
+  var amplitude = Math.max(...populacao)-Math.min(...populacao);
+
+  return("Rol: "+populacao+"<br>Tamanho do conjunto: "+limite+"<br>Soma: "+soma+"<br>Média: "+media+"<br>Moda(s): "+modes+"<br>Mediana: "+mediana+"<br>Maior valor: "+Math.max(...populacao)+
+  "<br> Menor valor: "+Math.min(...populacao)+"<br>Amplitude: "+amplitude+"<br>Variância: "+variancia+"<br>Desvio Padrão: "+desviopadrao);
 }
 
 /*

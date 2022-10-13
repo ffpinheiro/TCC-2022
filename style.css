@@ -18,12 +18,22 @@ main{
 }
 
 footer{
-    text-align:left;
-    background-color:#fff;
-    border-radius: 5px;
-    padding: 5px;
-    font-size: x-large;
-    margin-top: 10%;
+    background-color:#253F89;
+}
+
+div#txtFooter{
+    display: inline-block;
+    background-color: #253F89;
+    padding: 0;
+    color: #A2B3E2;
+    margin-left: 10%;
+}
+a#txtFooter{
+    color: #A2B3E2;
+}
+
+img{
+    max-width: 100%;
 }
 
 div{

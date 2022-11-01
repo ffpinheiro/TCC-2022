@@ -1,8 +1,11 @@
 body{
     background-color:#A2B3E2;
+    margin: 0;
+	padding: 0;
 }
 
 nav{
+    height: 5%;
     text-align:center;
     background-color:#fff;
     border-radius: 5px;
@@ -18,6 +21,7 @@ main{
 }
 
 footer{
+    margin-top: 30%;
     background-color:#253F89;
 }
 

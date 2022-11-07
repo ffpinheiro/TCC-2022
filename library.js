@@ -152,7 +152,7 @@ function areaPentagono(l){
 }
 
 function apotemaTriangulo(l){
-  return (areaTriangEqui(l)/((l*3)/2));
+  return (Math.sqrt(3)*l)/6;
 
   // l = lado
 }
@@ -768,32 +768,38 @@ function posRelativaCircCirc(xc1,yc1,xc2,yc2,r1,r2){
 
 function formaPolar(a,b){
    
-    var modulo = Math.hypot(a,b);
+    let modulo = Math.hypot(a,b);
 
-        var declive = (b-0)/(a-0);
-        var angulo = Math.atan(declive)*(180/Math.PI);
+        let declive = (b-0)/(a-0);
+        let angulo = Math.atan(declive)*(180/Math.PI);
 
   
 
-    if (a>0 && b>0){
-        var argumento = angulo;
+    if (a > 0 && b > 0){
+        let argumento = angulo;
     }
 
-    if (a>0 && b<0){
-        var argumento = 360-Math.abs(angulo);
+    if (a > 0 && b < 0){
+        let argumento = 360-Math.abs(angulo);
     }
 
-    if (a<0 && b>0){
-        var argumento = 180-Math.abs(angulo);
+    if (a < 0 && b > 0){
+        let argumento = 180-Math.abs(angulo);
     }
 
-    if (a<0 && b<0){
-        var argumento = angulo+180;
+    if (a < 0 && b < 0){
+        let argumento = angulo+180;
     }
 
    
     return("Forma polar: "+modulo+" cis "+argumento);
 
+}
+
+function formaAlgebrica(z,a){
+  let real = z*cos(a);
+  let imag = z*sin(a);
+  return(real+" + ("+imag+") i");
 }
 
 // CINEMATICA (MU, MUV, MRU, MRUV e MCU) -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------

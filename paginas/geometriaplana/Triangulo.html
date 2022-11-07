@@ -1,0 +1,113 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Triângulo</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html">Página inicial</a>
+		</nav>
+	</header>
+	
+	<main>
+		<h1>Triângulo</h1>
+		
+		<div id="calc">
+		
+
+                <h4> Usos </h4>
+
+				Geometria espacial: <br> <br>
+				Pirâmides <br>
+				Tetraedro <br>
+				Prismas <br> <br>	
+				
+				Trigonometria (todo o conteúdo)
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Dreieck.svg/1920px-Dreieck.svg.png" width="300px"> <br>
+			O triângulo é o mais simples dos polígonos, possuindo três lados e três ângulos. É a base de toda a trigonometria, e seus ângulos internos sempre somam 180°. Os triângulos podem ser classificados
+			quanto aos lados e quanto aos seus ângulos em 6 tipos diferentes. <br> <br>
+			Quanto aos lados: <br> <br>
+			Equilátero (3 lados iguais) <br>
+			Isósceles (2 lados iguais) <br>
+			Escaleno (todos os lados com medidas diferentes) <br> <br>
+
+			Quanto aos ângulos: <br> <br>
+			Retângulo (possui um ângulo reto) <br>
+			Acutângulo (possui todos os ângulos agudos) <br>
+			Obtusângulo (possui um ângulo obtuso, maior que 90°) <br> <br>
+
+
+			Com as medidas da base e altura, podemos calcular sua área: <br> <br>
+
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0410d6685d4606ec0aadf04124cf51adc8bc5d31"> <br>
+			onde B é a base e h é a altura
+
+		</div>
+
+		<div id="calc">
+			Base: <input type="number" placeholder="B" id="b"> <br>
+			Altura: <input type="number" placeholder="h" id="h">
+			<button onclick="resultado(b,h)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://www.todamateria.com.br/triangulo/"> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/matematica/triangulo.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+			<a href="https://www.infoescola.com/matematica/tipos-de-triangulos/"> <img src="../../imagens/infoescola.png" id="logo"> </a>
+		</div>
+		
+		
+		
+	</main>
+  
+	
+	<footer>
+		<img src="../../imagens/logo.png">
+		<div id="txtFooter">
+			<p>
+				Pitagórico versão 0.3
+			</p>
+				
+			<a href="../../quemsomos.html" id="txtFooter">
+				Quem somos
+			</a>
+			
+			<p>
+				ETEC Bento Quirino 2022
+			</p>
+		</div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+
+	<script> function resultado(b,h){
+        var b = parseFloat(document.getElementById("b").value);
+		var h = parseFloat(document.getElementById("h").value);
+        var res = document.getElementById("resultado");
+        res.innerHTML = "Área: "+areaTriangulo(b,h)+" u²";
+    }</script>
+    
+
+</body>
+
+</html>

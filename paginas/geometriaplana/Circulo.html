@@ -1,0 +1,109 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Circunferência</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html">Página inicial</a>
+		</nav>
+	</header>
+	
+	<main>
+		<h1>Circunferência</h1>
+		
+		<div id="calc">
+		
+
+                <h4> Usos </h4>
+
+			  Geometria espacial: <br> <br>
+			  Cilindro <br>
+			  Cone <br> <br>
+			  Geometria analítica: <br> <br>
+			  Circunferências			
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+		
+
+	    A circunferência é a figura geométrica formada pelo conjunto de todos os pontos equidistantes (isso é, que estão a mesma distância) de um ponto fixo chamado de centro. O círculo, muitas vezes confundido com
+		a circunferência, é a circunferência mais os pontos que se encontram dentro dela. <br> <br>
+		Dentro de uma circunferência, é possível delimitar partes como o raio, o diâmetro e a corda.
+		 <center> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Circle-withsegments.svg/1024px-Circle-withsegments.svg.png" width="300px"> </center>
+		 <br>
+		 O raio, em vermelho, é um segmento de reta que une o centro da circunferência com um dos pontos da mesma.<br>
+		 O diâmetro, em azul, é um segmento de reta que passa pelo centro e une duas extremidades da circunferência. Portanto, é o dobro do raio. <br>
+		 A corda é definida como qualquer outro segmento de reta que una duas extremidades, mas não passe pelo centro. <br> <br>
+		 As fórmulas da circunferência utilizam uma constante chamada pi, representada pela letra grega π, que é a razão entre a circunferência e o diâmetro. É um número
+		 irracional, não podendo ser representado como uma fração, mas seu valor pode ser aproximado para 3,14 ou 22/7. <br> <br>
+
+		 <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bea62e7a5f27be094b0f8d36ac2dff9003585281"> <br>
+		 Perímetro da circunferência, onde r = raio e d = diâmetro <br> <br>
+
+		 <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1fe8294643dfc9f5e4a26825446a26cf03e00348"> <br>
+		 Área da circunferência
+		</div>
+
+		<div id="calc">
+			Raio: <input type="number" placeholder="r" id="r">
+			<button onclick="resultado(r)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://www.todamateria.com.br/circunferencia/"> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/matematica/circulo-ou-circunferencia.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+			<a href="https://www.infoescola.com/geometria-plana/circunferencia/"> <img src="../../imagens/infoescola.png" id="logo"> </a>
+		</div>
+		
+		
+		
+	</main>
+  
+	
+	<footer>
+		<img src="../../imagens/logo.png">
+		<div id="txtFooter">
+			<p>
+				Pitagórico versão 0.3
+			</p>
+				
+			<a href="../../quemsomos.html" id="txtFooter">
+				Quem somos
+			</a>
+			
+			<p>
+				ETEC Bento Quirino 2022
+			</p>
+		</div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+
+	<script> function resultado(r){
+        var r = parseFloat(document.getElementById("r").value);
+        var res = document.getElementById("resultado");
+        res.innerHTML = "Perímetro: "+perimetroCirculo(r)+" u <br> Área: "+areaCirculo(r)+" u²";
+    }</script>
+    
+
+</body>
+
+</html>

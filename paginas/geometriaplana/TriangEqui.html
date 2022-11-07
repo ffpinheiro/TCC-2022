@@ -1,0 +1,108 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Triângulo equilátero</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html">Página inicial</a>
+		</nav>
+	</header>
+	
+	<main>
+		<h1>Triângulo equilátero</h1>
+		
+		<div id="calc">
+		
+			<h4> Requisitos </h4>
+			Triângulo
+                <h4> Usos </h4>
+
+			  Geometria espacial: <br> <br>
+			  Pirâmides <br>
+			  Tetraedro <br>
+			  Prismas <br> <br>		
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+
+			<center> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/01-Dreieck%2C_gleichseitig-1.svg/1024px-01-Dreieck%2C_gleichseitig-1.svg.png" width="300px"> </center>
+			O triângulo equilátero é um tipo especial de triângulo onde todos os lados possuem o mesmo comprimento e todos os ângulos internos possuem o mesmo valor: 60°. Por conta dessas características,
+			existem fórmulas específicas que funcionam apenas para o triângulo equilátero. É possível descobrir seu perímetro, área e apótema utilizando apenas a medida do lado. Tomando a medida do lado
+			como a, suas fórmulas são as seguintes:
+			<br><br>
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/508a1ebd4d563e7fd4f05dff23f4593472da8e38"> <br>
+			Perímetro <br> <br>
+
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b51ff1ef6bc656c9e7fc9cf18099371c30f32d1d"> <br>
+			Área <br> <br>
+
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fa6d430eb3e243448dcd3d3dc1b84a3ef6b1f11e"> <br>
+			Apótema
+			
+		
+
+		</div>
+
+		<div id="calc">
+			Medida do lado: <input type="number" placeholder="a" id="a">
+			<button onclick="resultado(a)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://www.todamateria.com.br/triangulo-equilatero/"> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/matematica/o-triangulo-equilatero-seus-elementos.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+			<a href="https://www.infoescola.com/matematica/tipos-de-triangulos/"> <img src="../../imagens/infoescola.png" id="logo"> </a>
+		</div>
+		
+		
+		
+	</main>
+  
+	
+	<footer>
+		<img src="../../imagens/logo.png">
+		<div id="txtFooter">
+			<p>
+				Pitagórico versão 0.3
+			</p>
+				
+			<a href="../../quemsomos.html" id="txtFooter">
+				Quem somos
+			</a>
+			
+			<p>
+				ETEC Bento Quirino 2022
+			</p>
+		</div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+
+	<script> function resultado(a){
+        var a = parseFloat(document.getElementById("a").value);
+        var res = document.getElementById("resultado");
+        res.innerHTML = "Perímetro: "+perimetroGeral(3,a)+" u <br><br> Área: "+areaTriangEqui(a)+" u² <br><br>"+"Apótema: "+apotemaTriangulo(a)+" u";
+    }</script>
+    
+
+</body>
+
+</html>

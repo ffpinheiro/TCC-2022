@@ -1,0 +1,106 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Retângulo</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html">Página inicial</a>
+		</nav>
+	</header>
+	
+	<main>
+		<h1>Retângulo</h1>
+		
+		<div id="calc">
+		
+
+                <h4> Usos </h4>
+		
+			Geometria espacial
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+
+			<center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Rectangle.svg/1920px-Rectangle.svg.png" width="300px"> </center> <br>
+
+			O retângulo é um quadrilátero com a característica de ter todos seus ângulos internos congruentes (iguais) e retos (90°). A soma de seus ângulos internos é 360°, sendo portanto um quadrilátero notável.
+			O quadrado é um caso especial do retângulo onde todos os lados possuem mesmo comprimento. A partir das medidas de sua base (a) e de sua altura (b), podemos calcular seu perímetro, área e diagonal. <br> <br>
+
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/beb782b6f072338d180d2f0e0c0d5438e8ea2d36"> <br>
+			Perímetro <br> <br>
+
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6054395262b62d757c6751b36e54d54bc594521a"> <br>
+			Área <br> <br>
+			
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3204a3b8de91d01e7f19cc07dd67b497653e4b42"> <br>
+			Diagonal (d)
+		
+
+	
+		</div>
+
+		<div id="calc">
+			Base: <input type="number" placeholder="a" id="a"> <br>
+			Altura: <input type="number" placeholder="b" id="b"> 
+			<button onclick="resultado(a,b)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://www.todamateria.com.br/retangulo/"> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/matematica/retangulos.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+			<a href="https://www.infoescola.com/matematica/area-de-quadrados-e-retangulos/"> <img src="../../imagens/infoescola.png" id="logo"> </a>
+		</div>
+		
+		
+		
+	</main>
+  
+	
+	<footer>
+		<img src="../../imagens/logo.png">
+		<div id="txtFooter">
+			<p>
+				Pitagórico versão 0.3
+			</p>
+				
+			<a href="../../quemsomos.html" id="txtFooter">
+				Quem somos
+			</a>
+			
+			<p>
+				ETEC Bento Quirino 2022
+			</p>
+		</div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+
+	<script> function resultado(a,b){
+        var a = parseFloat(document.getElementById("a").value);
+		var b = parseFloat(document.getElementById("b").value);
+        var res = document.getElementById("resultado");
+        res.innerHTML = "Perímetro: "+(2*(a+b))+" u <br> <br> Área: "+areaRetangulo(a,b)+" u²"+"<br> <br> Diagonal: "+Math.hypot(a,b)+" u";
+    }</script>
+    
+
+</body>
+
+</html>

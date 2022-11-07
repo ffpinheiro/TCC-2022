@@ -1,0 +1,111 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Quadrado</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html">Página inicial</a>
+		</nav>
+	</header>
+	
+	<main>
+		<h1>Quadrado</h1>
+		
+		<div id="calc">
+		
+
+                <h4> Usos </h4>
+
+			  Geometria espacial: <br> <br>
+
+			 Prismas <br>
+			 Cuboide <br>
+			 Pirâmides
+				
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/SquareDefinition.svg/1024px-SquareDefinition.svg.png" width="200px"> <br> <br>
+
+			O quadrado é um quadrilátero, onde todos seus 4 lados possuem mesmo comprimento e seus 4 ângulos internos são congruentes e retos. É considerado um tipo de paralelogramo e também um tipo de retângulo, sendo 
+			um caso específico dos dois. Por conta de suas características, possui propriedades interessantes que levam suas fórmulas a serem as mais simples dentre os quadriláteros. Tomando l 
+			como a medida do lado, podemos calcular facilmente seu perímetro, área, apótema e diagonal utilizando as seguintes fórmulas: <br> <br>
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/29ca98ed1764be5b42130561cae9dd8b53d75b11"> <br>
+			Perímetro <br> <br>
+			
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/36112fb1f1031028ca461f41cb10c69fe2a2cec8"> <br>
+			Área <br> <br>
+
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b90cfa72ae79c9fae5033ae3e4aa937339481a49"> <br>
+			Apótema <br> <br>
+
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/be53d4603ffdf58173b6fae3864bed594b5fd8a8"> <br>
+			Diagonal
+		
+
+		</div>
+
+		<div id="calc">
+			Medida do lado: <input type="number" placeholder="l" id="l">
+			<button onclick="resultado(l)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://www.todamateria.com.br/area-do-quadrado/"> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/o-que-e/matematica/o-que-e-quadrado.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+			<a href="https://www.infoescola.com/matematica/area-de-quadrados-e-retangulos/"> <img src="../../imagens/infoescola.png" id="logo"> </a>
+		</div>
+		
+		
+		
+	</main>
+  
+	
+	<footer>
+		<img src="../../imagens/logo.png">
+		<div id="txtFooter">
+			<p>
+				Pitagórico versão 0.3
+			</p>
+				
+			<a href="../../quemsomos.html" id="txtFooter">
+				Quem somos
+			</a>
+			
+			<p>
+				ETEC Bento Quirino 2022
+			</p>
+		</div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+
+	<script> function resultado(l){
+        var l = parseFloat(document.getElementById("l").value);
+        var res = document.getElementById("resultado");
+        res.innerHTML = "Perímetro: "+perimetroGeral(4,l)+" u <br><br> Área: "+areaQuadrado(l)+ " u² <br><br> Apótema: "+apotemaQuadrado(l)+" u <br> <br> Diagonal: "+Math.hypot(l,l)+" u";
+    }</script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Trapézio</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html">Página inicial</a>
+		</nav>
+	</header>
+	
+	<main>
+		<h1>Trapézio</h1>
+		
+		<div id="calc">
+		
+
+                <h4> Usos </h4>
+
+				Geometria espacial		
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Trapezoid.svg/1920px-Trapezoid.svg.png" width="250px"> <br> <br>
+		O trapézio é um quadrilátero (assim como o retângulo, losango e o quadrado) com 2 lados paralelos, chamados de bases. Uma dessas bases é a menor e a outra é a maior, e a partir delas que é possível calcular 
+		a área do trapézio. <br> <br>
+		<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cff4c5cc5c122812856900d504c35d645e06b485"> <br>
+		Área do trapézio, onde a é a base menor, b a base maior e h a altura
+
+	  
+		</div>
+
+		<div id="calc">
+			Base maior: <input type="number" placeholder="a" id="a"> <br>
+			Base menor: <input type="number" placeholder="b" id="b"> <br>
+		    Altura: <input type="number" placeholder="h" id="h">
+			<button onclick="resultado(a,b,h)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://www.todamateria.com.br/trapezio/"> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/o-que-e/matematica/o-que-e-trapezio.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+			<a href="https://www.infoescola.com/geometria-plana/trapezio/"> <img src="../../imagens/infoescola.png" id="logo"> </a>
+		</div>
+		
+		
+		
+	</main>
+  
+	
+	<footer>
+		<img src="../../imagens/logo.png">
+		<div id="txtFooter">
+			<p>
+				Pitagórico versão 0.3
+			</p>
+				
+			<a href="../../quemsomos.html" id="txtFooter">
+				Quem somos
+			</a>
+			
+			<p>
+				ETEC Bento Quirino 2022
+			</p>
+		</div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+
+	<script> function resultado(a,b,h){
+        var a = parseFloat(document.getElementById("a").value);
+		var b = parseFloat(document.getElementById("b").value);
+		var h = parseFloat(document.getElementById("h").value);
+        var res = document.getElementById("resultado");
+        res.innerHTML = "Área: "+areaTrapezio(a,b,h)+" u²";
+    }</script>
+    
+
+</body>
+
+</html>

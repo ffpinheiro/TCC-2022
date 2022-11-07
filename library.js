@@ -151,10 +151,10 @@ function areaPentagono(l){
   */
 }
 
-function apotemaTriangulo(h){
-  return (h/3);
+function apotemaTriangulo(l){
+  return (areaTriangEqui(l)/((l*3)/2));
 
-  // h = altura
+  // l = lado
 }
 
 function apotemaQuadrado(l){

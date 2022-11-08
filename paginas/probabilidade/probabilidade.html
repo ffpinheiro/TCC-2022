@@ -1,0 +1,122 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Princípios da probabilidade</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html">Página inicial</a>
+		</nav>
+	</header>
+	
+	<main>
+		<h1>Princípios da probabilidade</h1>
+		
+		<div id="calc">
+			<h4>Requisitos </h4>
+			
+				
+				Aritmética
+
+                <h4> Usos </h4>
+
+                Probabilidade união <br>
+                Probabilidade intersecção <br>
+                Probabilidade condicional  <br>
+                Probabilidade binomial
+			
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+		Probabilidade é o ramo da matemática que trabalha com fenômenos aleatórios e o cálculo das chances de um evento acontecer. Uma probabilidade é sempre um valor entre 0 e 1, onde quanto mais próximo de 1, mais 
+        provável a ocorrência do evento. Alguns dos conceitos mais importantes da probabilidade são: <br> <br>
+
+        <h5> Experimento Aleatório </h5>
+
+        É um experimento em que não é possível prever o resultado antes de realizá-lo. Por conta disso, pode apresentar resultados diferentes mesmo quando realizado em condições iguais. 
+
+        <h5> Ponto amostral </h5>
+
+        Um dos resultados possíveis de um experimento aleatório. Exemplo: no lançamento de um dado de seis faces, {5} é um ponto amostral.
+
+        <h5> Espaço amostral </h5>
+
+        É o conjunto de todos os pontos amostrais de um determinado experimento aleatório. Portanto, mesmo não sendo possível prever exatamente qual será o resultado de um experimento aleatório, pode-se dizer
+        com certeza que ele está dentro do espaço amostral. É representado pela letra grega Ω (ômega), portanto o Ω do lançamento de um dado é: {1, 2, 3, 4, 5, 6}.
+
+        <h5> Evento </h5>
+
+        É um subconjunto do espaço amostral. Podemos citar o evento "obter um número ímpar" utilizando um dado de seis faces. Esse evento A é representado por: A{2, 4, 6}.
+		
+
+        <h5> Cálculo da probabilidade </h5>
+
+        A probabilidade é calculada através da divisão do número de eventos favoráveis pelo número de eventos possíveis (o número de elementos do espaço amostral). No exemplo anterior, a probabilidade de se
+        conseguir um número ímpar seria: <br> <br>
+        <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8d344b6503a494fee0af5aceb70bf471830046ef">
+
+        </div>
+
+		<div id="calc">
+			Número de eventos favoráveis: <input type="number" placeholder="A" id="a"> <br>
+            Número de eventos possíveis: <input type="number" placeholder="Ω" id="s"> 
+			<button onclick="resultado(a,s)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://www.todamateria.com.br/probabilidade/"> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/matematica/probabilidade.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+			<a href="https://www.infoescola.com/matematica/probabilidade/"> <img src="../../imagens/infoescola.png" id="logo"> </a>
+		</div>
+		
+		
+		
+	</main>
+  
+	
+	<footer>
+		<img src="../../imagens/logo.png">
+		<div id="txtFooter">
+			<p>
+				Pitagórico versão 0.3
+			</p>
+				
+			<a href="../../quemsomos.html" id="txtFooter">
+				Quem somos
+			</a>
+			
+			<p>
+				ETEC Bento Quirino 2022
+			</p>
+		</div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+	<script> function resultado(a,s){
+        var a = parseFloat(document.getElementById("a").value);
+        var s = parseFloat(document.getElementById("s").value);
+        var res = document.getElementById("resultado");
+        res.innerHTML = "Probabilidade: "+probabilidade(a,s)+" ou "+probabilidade(a,s)*100+"%";
+    }</script>
+    
+
+</body>
+
+</html>

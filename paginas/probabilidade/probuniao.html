@@ -1,0 +1,99 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Probabilidade da união</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html">Página inicial</a>
+		</nav>
+	</header>
+	
+	<main>
+		<h1>Probabilidade da união</h1>
+		
+		<div id="calc">
+			<h4>Requisitos </h4>
+			
+				
+				Probabilidade <br>
+                Probabilidade da intersecção
+                <h4> Usos </h4>
+
+                Probabilidade condicional 
+			
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Venn0111.svg/1280px-Venn0111.svg.png" width="250px"> <br>
+            A probabilidade da união de dois eventos A e B é a probabilidade de A ou B ocorrerem. Para eventos que não são mutuamente exclusivos, isto é, eventos que possuem uma intersecção, a probabilidade da união
+            é dada pela seguinte fórmula: <br> <br>
+            <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c3a3939789297e8a2c4d2480254624e466d3bc95"> <br>
+        Importante notar que "ou" se torna adição. Porém, para compensar o fato da intersecção ser contada "duplicadamente", é necessário subtraí-la do resultado final.
+	
+       
+
+        </div>
+
+		<div id="calc">
+			Probabilidade do evento A: <input type="number" placeholder="A" id="a"> <br>
+            Probabilidade do evento B: <input type="number" placeholder="B" id="b"> 
+			<button onclick="resultado(a,b)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://brasilescola.uol.com.br/matematica/probabilidade-uniao-dois-eventos.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+			
+		</div>
+		
+		
+		
+	</main>
+  
+	
+	<footer>
+		<img src="../../imagens/logo.png">
+		<div id="txtFooter">
+			<p>
+				Pitagórico versão 0.3
+			</p>
+				
+			<a href="../../quemsomos.html" id="txtFooter">
+				Quem somos
+			</a>
+			
+			<p>
+				ETEC Bento Quirino 2022
+			</p>
+		</div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+	<script> function resultado(a,b){
+        var a = parseFloat(document.getElementById("a").value);
+        var b = parseFloat(document.getElementById("b").value);
+        var res = document.getElementById("resultado");
+        res.innerHTML = "Probabilidade: "+probUniao(a,b)+" ou "+probUniao(a,b)*100+"%";
+    }</script>
+    
+
+</body>
+
+</html>

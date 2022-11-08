@@ -77,13 +77,14 @@ div#materias:hover{
     color: #fff;
 }
 
+div#caminho{
+    margin: 0px;
+    border-radius: 0px;
+}
+
 a{
     text-decoration: none;
     color:#000;
-}
-
-a:hover{
-    color:#fff;
 }
 
 div#calc{

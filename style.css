@@ -68,3 +68,7 @@ div#calc{
     color: #0000FF;
     font-size: medium;
 }
+
+#logo{
+    max-width: 50%;
+}

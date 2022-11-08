@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400&family=Mulish&display=swap');
+
+
 body{
     background-color:#A2B3E2;
     margin: 0;
     padding: 0;
-    font-family: arial;
+    font-family: 'Mulish', sans-serif;
+    background: linear-gradient(#A2B3E2, #a3aecc, #fff);
 }
 
 nav{
@@ -25,6 +30,7 @@ footer{
     margin-top: 30%;
     background-color:#253F89;
     padding-top: 50px;
+    
 }
 
 div#txtFooter{
@@ -33,6 +39,7 @@ div#txtFooter{
     padding: 0;
     color: #A2B3E2;
     margin-left: 10%;
+    box-shadow: 0px 0px 0px 0px;
 }
 a#txtFooter{
     color: #A2B3E2;
@@ -44,11 +51,27 @@ img{
 
 div{
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 20px;
     padding: 15px;
     font-size: 20px;
     margin: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
+
+div#resultado{
+    background-color: #fff;
+    border-radius: 40px;
+    padding: 15px;
+    font-size: 20px;
+    margin: 10px;
+    box-shadow: 0px 0px 0px 0px;
+}
+
+div#resultado2,div#resultadov,div#resultadoa,div#resultadof,div#resultado3,div#resultado4{
+    box-shadow: 0px 0px 0px 0px;
+}
+
+
 
 a{
     text-decoration: none;
@@ -56,17 +79,16 @@ a{
 }
 
 a:hover{
-    color:8A0000;
+    color:#253F89;
 }
 
 div#calc{
     width: 100%;
     margin-left: 0%;
-    padding: 0px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+
+
 }
 
 .indice{
@@ -76,5 +98,5 @@ div#calc{
 }
 
 #logo{
-    width: 50%;
+    max-width: 50%;
 }

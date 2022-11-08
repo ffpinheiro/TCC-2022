@@ -1,0 +1,99 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Probabilidade da intersecção</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html">Página inicial</a>
+		</nav>
+	</header>
+	
+	<main>
+		<h1>Probabilidade da intersecção</h1>
+		
+		<div id="calc">
+			<h4>Requisitos </h4>
+			
+				
+				Probabilidade
+                <h4> Usos </h4>
+
+                Probabilidade união <br>
+                Probabilidade condicional 
+			
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Venn0001.svg/1280px-Venn0001.svg.png" width="250px"> <br>
+            Para eventos independentes, isso é, eventos em que a probabilidade de um não interfere na do outro, a probabilidade da intersecção é dada por: <br> <br>
+            <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/efffd6c2941ddf1a3e8f9acc3c570e7b48f721df"> <br> <br>
+            Importante notar que "e" se torna multiplicação.
+	
+       
+
+        </div>
+
+		<div id="calc">
+			Probabilidade do evento A: <input type="number" placeholder="A" id="a"> <br>
+            Probabilidade do evento B: <input type="number" placeholder="B" id="b"> 
+			<button onclick="resultado(a,b)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://www.todamateria.com.br/probabilidade/"> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/matematica/probabilidade.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+			<a href="https://www.infoescola.com/matematica/probabilidade/"> <img src="../../imagens/infoescola.png" id="logo"> </a>
+		</div>
+		
+		
+		
+	</main>
+  
+	
+	<footer>
+		<img src="../../imagens/logo.png">
+		<div id="txtFooter">
+			<p>
+				Pitagórico versão 0.3
+			</p>
+				
+			<a href="../../quemsomos.html" id="txtFooter">
+				Quem somos
+			</a>
+			
+			<p>
+				ETEC Bento Quirino 2022
+			</p>
+		</div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+	<script> function resultado(a,b){
+        var a = parseFloat(document.getElementById("a").value);
+        var b = parseFloat(document.getElementById("b").value);
+        var res = document.getElementById("resultado");
+        res.innerHTML = "Probabilidade: "+probInter(a,b)+" ou "+probInter(a,b)*100+"%";
+    }</script>
+    
+
+</body>
+
+</html>

@@ -550,8 +550,8 @@ function probUniao(Pa,Pb){
   return (Pa+Pb) - probInter(Pa,Pb);
 }
 
-function probCondicional(Pa,Pb){
-  return (Pa*Pb)/Pb;
+function probCond(PaPb,Pb){
+  return PaPb/Pb;
 }
 
  /*

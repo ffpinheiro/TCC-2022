@@ -1,0 +1,119 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Probabilidade binomial</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html">Página inicial</a>
+		</nav>
+	</header>
+	
+	<main>
+		<h1>Probabilidade binomial</h1>
+		
+		<div id="calc">
+			<h4>Requisitos </h4>
+			
+				
+				Probabilidade <br>
+                Combinação
+
+			
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+
+            A probabilidade binomial é a probabilidade de se conseguir um certo número de sucessos em uma certa sequência de tentativas, conforme as regras: <br> <br>
+
+            1. Cada tentativa tem 2 possibilidades: sucesso ou fracasso; <br>
+            2. Cada tentativa é independente das demais, ou seja, uma não interfere na outra; <br>
+            3. A probabilidade de sucesso p é a mesma para todas as tentativas; <br>
+            4. O que se pretende descobrir é a probabilidade de se conseguir k sucessos nas n tentativas. <br> <br>
+
+            A fórmula utilizada para calcular a probabilidade binomial é a seguinte: <br><br>
+
+            <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7a96d0dd9ee96319dacfbe372578fbcc29ffdefa"> <br> <br>
+
+            Legenda: <br>
+            n = número de tentativas (número de vezes que o evento se repete) <br>
+            k = número de sucessos <br>
+            p = probabilidade de sucesso <br><br>
+
+            (1-p) é a complementar da probabilidade de sucesso, ou seja, é a probabilidade de insucesso ou fracasso. Às vezes é representada por q. <br> <br>
+            
+            Exemplo: ao jogar um dardo num alvo 10 vezes, qual é a probabilidade de acertar o alvo exatamente 3 vezes, sabendo que a probabilidade de acerto é 70%? <br> <br>
+
+            C<sub>10,3</sub> * 0,7<sup>3</sup> * 0,3<sup>7</sup> = <br>
+            120 * 0,343 * 0,0002187 = <br>
+            0,009 ou 0,9% de chance
+
+
+
+		
+        </div>
+
+		<div id="calc">
+			Número de tentativas: <input type="number" placeholder="n" id="n"> <br>
+            Número de sucessos: <input type="number" placeholder="k" id="k"> <br>
+            Probabilidade de sucesso: <input type="number" placeholder="p" id="p">
+			<button onclick="resultado(n,k,p)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://brasilescola.uol.com.br/matematica/ensaio-binomial.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+
+		</div>
+		
+		
+		
+	</main>
+  
+	
+	<footer>
+		<img src="../../imagens/logo.png">
+		<div id="txtFooter">
+			<p>
+				Pitagórico versão 0.3
+			</p>
+				
+			<a href="../../quemsomos.html" id="txtFooter">
+				Quem somos
+			</a>
+			
+			<p>
+				ETEC Bento Quirino 2022
+			</p>
+		</div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+	<script> function resultado(n,k,p){
+        var n = parseFloat(document.getElementById("n").value);
+        var k = parseFloat(document.getElementById("k").value);
+        var p = parseFloat(document.getElementById("p").value);
+        var res = document.getElementById("resultado");
+        res.innerHTML = "Probabilidade: "+probBinomial(n,k,p)+" ou "+probBinomial(n,k,p)*100+"%";
+    }</script>
+    
+
+</body>
+
+</html>

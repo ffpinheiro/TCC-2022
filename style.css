@@ -1,7 +1,8 @@
 body{
     background-color:#A2B3E2;
     margin: 0;
-	padding: 0;
+    padding: 0;
+    font-family: arial;
 }
 
 nav{
@@ -23,6 +24,7 @@ main{
 footer{
     margin-top: 30%;
     background-color:#253F89;
+    padding-top: 50px;
 }
 
 div#txtFooter{
@@ -43,7 +45,7 @@ img{
 div{
     background-color: #fff;
     border-radius: 5px;
-    padding: 5px;
+    padding: 15px;
     font-size: 20px;
     margin: 10px;
 }
@@ -61,6 +63,10 @@ div#calc{
     width: 100%;
     margin-left: 0%;
     padding: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 .indice{

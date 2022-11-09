@@ -84,9 +84,9 @@
 
     <script src="../../library.js"></script>
 	<script> function resultado(n){
-       var n = parseFloat(document.getElementById("n").value);
+       var n = parseInt(document.getElementById("n").value);
         var res = document.getElementById("resultado");
-        res.innerHTML = permutacaoSimples(n);
+        res.innerHTML = Math.round(permutacaoSimples(n));
     }</script>
     
 

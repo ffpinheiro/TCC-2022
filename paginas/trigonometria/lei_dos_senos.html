@@ -22,8 +22,7 @@
 		
 		<div id="calc">
 			<h4>Requisitos </h4>
-				
-			<h4>Usos</h4>
+				Álgebra
 			
 		</div>
 
@@ -41,10 +40,10 @@
 		</div>
 
 		<div id="calc">
-			<h4>Calculadora para descobrir o valor de um lado</h4>
-			<p>Digite o valor do seno de um ângulo: <input type="number" id="sinB"></p>
-			<p>Digite o valor do lado oposto a esse ângulo: <input type="number" id="b"></p>
-			<p>Digite o valor do seno do outro ângulo: <input type="number" id="sinA"></p>
+			
+			<p>Seno de um ângulo: <input type="number" id="sinB"></p>
+			<p>Lado oposto a esse ângulo: <input type="number" id="b"></p>
+			<p>Seno do outro ângulo: <input type="number" id="sinA"></p>
 			<button onclick="resultado()"> Calcular </button>
 
 			<div id="resultado"> </div>
@@ -85,7 +84,7 @@
 			let sinA = parseFloat(document.getElementById('sinA').value);
 			let A = leiSenos(b, sinB, sinA);
 			let resultado = document.getElementById('resultado');
-			resultado.innerHTML = Math.round(A * 10) / 10;
+			resultado.innerHTML = "O valor do outro lado é "+Math.round(A * 10) / 10+" u";
 		}
 	</script>
 

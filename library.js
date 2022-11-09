@@ -6,15 +6,14 @@
  // PROGRESSOES ARITMETICAS E GEOMETRICAS (TERMO GERAL E SOMA DOS TERMOS) ----------------------------------------------------------------------------------------------------------------------------------------------------
 
  
- function enesimoTermoPA(ak,n,r,k){
+  function enesimoTermoPA(a1,n,r){
 
-  return ak+(n-k)*r;
+  return a1+(n-1)*r;
 
   /*
-  ak = kesimo termo
+  a1 = primeiro termo
   n = posicao do termo a ser descoberto
   r = razao
-  k = posicao do kesimo termo
   */
  }
  

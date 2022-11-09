@@ -14,7 +14,6 @@ nav{
     height: fit-content;
     text-align:center;
     background-color:#fff;
-    border-radius: 5px;
     padding: 5px;
     font-size: x-large;
     border-bottom: 5px solid #253F89;
@@ -80,6 +79,16 @@ div#materias:hover{
 div#caminho{
     margin: 0px;
     border-radius: 0px;
+    background-color: #253F89;
+    color: #fff;
+}
+
+a#caminho{
+    color: #fff;
+}
+
+a#caminho:hover{
+    text-decoration: underline;
 }
 
 a{

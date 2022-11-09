@@ -82,10 +82,10 @@
 
     <script src="../../library.js"></script>
 	<script> function resultado(n,p){
-       var n = parseFloat(document.getElementById("n").value);
-        var p = parseFloat(document.getElementById("p").value);
+       var n = parseInt(document.getElementById("n").value);
+        var p = parseInt(document.getElementById("p").value);
         var res = document.getElementById("resultado");
-        res.innerHTML = arranjoSimples(n,p);
+        res.innerHTML = Math.round(arranjoSimples(n,p));
     }</script>
     
 

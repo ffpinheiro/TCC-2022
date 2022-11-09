@@ -665,7 +665,7 @@ function distPontoPonto(x1,x2,y1,y2){
   if (det == 0){
     return "Os pontos não formam um triângulo";
   }else{
-    return "Os pontos formam um triângulo. Sua área é de: "+(1/2*Math.abs(det));
+    return "Os pontos formam um triângulo. Sua área é de: "+(1/2*Math.abs(det))+" u²";
   }
   }
 

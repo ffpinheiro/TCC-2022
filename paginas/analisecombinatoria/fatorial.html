@@ -88,9 +88,9 @@
 
     <script src="../../library.js"></script>
 	<script> function resultado(num){
-        var num = parseFloat(document.getElementById("num").value);
+        var num = parseInt(document.getElementById("num").value);
         var res = document.getElementById("resultado");
-        res.innerHTML = fat(num);
+        res.innerHTML = Math.round(fat(num));
     }</script>
     
 

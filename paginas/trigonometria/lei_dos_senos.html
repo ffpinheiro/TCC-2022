@@ -28,19 +28,34 @@
 		</div>
 
 		<div id="calc">
-			
+			<h4>Definição</h4>
+			<p>
+				É possível calcular lados e ângulos desconhecidos de um triângulo retângulo com as razões trigonométricas sem grandes problemas. Quando trabalhamos
+				com triângulos quaisquer, o uso da lei dos senos e lei dos cossenos pode se tornar necessário.
+			</p>
+			<p>
+				A lei dos senos afirma que o um lado do triângulo dividido pelo seno do ângulo oposto é sempre proporcional.
+			</p>
+			<center><img src="../../imagens/lei-dos-senos.png" width="300px"></center>
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/95865eb2f5bc51b6245ffd508dc7bd42a44b1a7a">
 		</div>
 
 		<div id="calc">
-			
+			<h4>Calculadora para descobrir o valor de um lado</h4>
+			<p>Digite o valor do seno de um ângulo: <input type="number" id="sinB"></p>
+			<p>Digite o valor do lado oposto a esse ângulo: <input type="number" id="b"></p>
+			<p>Digite o valor do seno do outro ângulo: <input type="number" id="sinA"></p>
+			<button onclick="resultado()"> Calcular </button>
+
+			<div id="resultado"> </div>
 		</div>
 
 		<div id="calc">
 			<h4>Veja mais em:</h4>
 
-			<a href=""> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
-			<a href=""> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
-			<a href=""> <img src="../../imagens/infoescola.png" id="logo"> </a>
+			<a href="https://www.todamateria.com.br/lei-dos-senos/"> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/matematica/lei-dos-senos.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+			<a href="https://www.infoescola.com/trigonometria/lei-dos-senos-e-dos-cossenos/"> <img src="../../imagens/infoescola.png" id="logo"> </a>
 		</div>
 		
 	</main>
@@ -62,9 +77,15 @@
 		</div>
 	</footer>
 
+	<script src="../../library.js"></script>
 	<script>
 		function resultado() {
-			
+			let sinB = parseFloat(document.getElementById('sinB').value); 
+			let b = parseFloat(document.getElementById('b').value);
+			let sinA = parseFloat(document.getElementById('sinA').value);
+			let A = leiSenos(b, sinB, sinA);
+			let resultado = document.getElementById('resultado');
+			resultado.innerHTML = Math.round(A * 10) / 10;
 		}
 	</script>
 

@@ -28,19 +28,32 @@
 		</div>
 
 		<div id="calc">
-			
+			<h4>Definição</h4>
+			<p>
+				A lei dos cossenos é uma generalização do Teorema de Pitágoras que se aplica a qualquer tipo de triângulo. Ela pode ser usada para descobrir um lado ou
+				ângulo de um triângulo qualquer conhecendo os outros lados.
+			</p>
+			<center><img src="../../imagens/lei-dos-senos.png" width="300px"></center>
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fa3b68d30bb98e93cef7e0c8103af5ce52e359ef"> <br>
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2566944cf88fe7fbf4a663a4a5671ca644e9adc8"> <br>
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/529f313d3de1608a39a1321dfb2b477595a160bf">
 		</div>
 
 		<div id="calc">
-			
+			<p>Digite o valor de um lado: <input type="number" id="b"></p>
+			<p>Digite o valor de outro lado: <input type="number" id="c"></p>
+			<p>Digite o valor do ângulo aposto ao lado que se deseja descobrir: <input type="number" id="A"></p>
+			<button onclick="resultado()"> Calcular </button>
+
+			<div id="resultado"> a </div>
 		</div>
 
 		<div id="calc">
 			<h4>Veja mais em:</h4>
 
-			<a href=""> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
-			<a href=""> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
-			<a href=""> <img src="../../imagens/infoescola.png" id="logo"> </a>
+			<a href="https://www.todamateria.com.br/lei-dos-cossenos/"> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/matematica/lei-coseno.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+			<a href="https://www.infoescola.com/trigonometria/lei-dos-senos-e-dos-cossenos/"> <img src="../../imagens/infoescola.png" id="logo"> </a>
 		</div>
 		
 	</main>
@@ -62,9 +75,15 @@
 		</div>
 	</footer>
 
+	<script src="../../library.js"></script>
 	<script>
 		function resultado() {
-			
+			let b = parseInt(document.getElementById("b").value); 
+			let c = parseInt(document.getElementById('c').value);
+			let A = parseInt(document.getElementById('A').value);
+			let a = leiCossenos(10,8,50);
+			let resultado = document.getElementById('resultado');
+			resultado.innerHTML = Math.round(a * 100) / 100;
 		}
 	</script>
 

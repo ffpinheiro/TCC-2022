@@ -1,0 +1,132 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Equação da reta</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html"> <img src="../../imagens/logo.png"> </a>
+		</nav>
+		<div id="caminho">
+			<a href="../../matematica.html" id="caminho"> Matemática </a>/<a href="../geoanalitica.html" id="caminho"> Geometria Analítica </a>
+		</div>
+	</header>
+	
+	<main>
+		<h1>EQUAÇÃO DA RETA</h1>
+		
+		<div id="calc">
+		
+                <h4> Requisitos</h4>
+
+                Geometria Plana <br>
+                Álgebra <br>
+                Matrizes
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+            Uma reta é um conjunto infinito de pontos, um conceito abstrato da matemática que pode ser definido como um objeto que possui comprimento, mas sem largura ou profundidade. Um segmento de reta é 
+            parte de uma reta, delimitado por 2 pontos. Existem 2 maneiras de determinar a equação de uma reta: a partir de 2 pontos ou a partir de 1 ponto e 1 ângulo. <br> <br>
+
+          
+            Quando se tem 2 pontos de uma reta, para determinar sua equação devemos montar uma matriz 3x3 com as coordenadas dos pontos e os genéricos "x" e "y" nas primeiras 2 colunas, enquanto que na 3ª coluna
+            preenche-se de 1s. <br><br>
+
+            <img src="../../imagens/matriz.png"> <br> <br>
+
+            Depois, o determinante da matriz é igualado a 0, e os devidos cálculos são realizados. Para uma breve revisão sobre determinantes de matrizes: <a href="alinhamento.html"> <u> alinhamento de 3 pontos</u></a>.
+            <br> <br>
+            Quando se tem 1 ponto e o ângulo, para determinar sua equação deve-se utilizar a fórmula: <br> <br>
+            <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d6756ad5943432d2b4ca4f77734bda1e024a52d7"> <br>
+            Onde m é a tangente do ângulo que a reta faz com o eixo x.
+		</div>
+
+        <div id="calc">
+			Ponto A: <input type="number" placeholder="xa" id="xa" style="width:60px">, <input type="number" placeholder="ya" id="ya" style="width:60px"> <br>
+			Ponto B: <input type="number" placeholder="xb" id="xb" style="width:60px">, <input type="number" placeholder="yb" id="yb" style="width:60px"> <br><br>
+
+			<button onclick="resultado(xa,ya,xb,yb)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+		</div>
+
+        <div id="calc">
+			Ponto A: <input type="number" placeholder="x1" id="x1" style="width:60px">, <input type="number" placeholder="y1" id="y1" style="width:60px"> <br>
+			Ângulo (em graus): <input type="number" placeholder="m" id="m" style="width:60px"> <br> <br>
+
+			<button onclick="resultado2(x1,y1,m)"> Calcular </button>
+			<br>
+		
+			<div id="resultado2"> </div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://www.todamateria.com.br/equacao-da-reta/"> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/matematica/equacao-geral-reta.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+			<a href="https://www.infoescola.com/matematica/equacao-geral-da-reta/"> <img src="../../imagens/infoescola.png" id="logo"> </a>
+		</div>
+		
+		
+		
+	</main>
+  
+	
+	<footer>
+		<img src="../../imagens/logo.png">
+		<div id="txtFooter">
+			<p>
+				Pitagórico versão 0.3
+			</p>
+				
+			<a href="../../quemsomos.html" id="txtFooter">
+				Quem somos
+			</a>
+			
+			<p>
+				ETEC Bento Quirino 2022
+			</p>
+		</div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+
+	<script>    
+    
+    function resultado(p1,p2,q1,q2){
+        var xa = parseFloat(document.getElementById("xa").value);
+        var ya = parseFloat(document.getElementById("ya").value);
+		var xb = parseFloat(document.getElementById("xb").value);
+        var yb = parseFloat(document.getElementById("yb").value);
+        var res = document.getElementById("resultado");
+        res.innerHTML = "Reta: "+equacaoReta2Pontos(xa,ya,xb,yb);
+    }
+    </script>
+    
+    <script> 
+   function resultado2(x1,y1,m){
+         var x1 = parseFloat(document.getElementById("x1").value);
+        var y1 = parseFloat(document.getElementById("y1").value);
+        var m =  parseFloat(document.getElementById("m").value);
+        var res2 = document.getElementById("resultado2");
+        res2.innerHTML = equacaoReta1Ponto1Angulo(x1,y1,m);
+        }
+    </script>
+
+</body>
+
+</html>

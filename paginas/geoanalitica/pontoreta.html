@@ -1,0 +1,107 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Distância entre ponto e reta</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html"> <img src="../../imagens/logo.png"> </a>
+		</nav>
+		<div id="caminho">
+			<a href="../../matematica.html" id="caminho"> Matemática </a>/<a href="../geoanalitica.html" id="caminho"> Geometria Analítica </a>
+		</div>
+	</header>
+	
+	<main>
+		<h1>DISTÂNCIA ENTRE PONTO E RETA</h1>
+		
+		<div id="calc">
+		
+                <h4> Requisitos</h4>
+
+                Geometria Plana <br>
+                Álgebra
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+			A distância entre ponto e reta é um dos assuntos mais importantes da geometria analítica, juntamente com a distância entre dois pontos. Para realizar o cálculo da distância, devemos ter
+            a coordenada do ponto bem como a equação geral da reta em questão. O caminho mais curto entre os dois será aquele em que, ao estender um segmento do ponto até a reta, esse segmento intersecta 
+            a reta perpendicularmente (em um ângulo de 90°), como na figura. <br> <br>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Distancia_punto_recta_1.png"> <br> <br>
+            A fórmula da distância entre ponto e reta é a seguinte: <br> <br>
+            <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fe89ef71214b5a1fc5ce515a80b7c9ca2d78b1dd"><br>
+            Onde P é o ponto, R é a reta, x<sub>0</sub> e y<sub>0</sub> são as coordenadas do ponto e a, b, c coeficientes da reta.
+
+
+		</div>
+
+		<div id="calc">
+			Reta: <input type="number" placeholder="a" id="a" style="width:60px">, <input type="number" placeholder="b" id="b" style="width:60px">, <input type="number" placeholder="c" id="c" style="width:60px">  <br>
+			Ponto: <input type="number" placeholder="x0" id="x0" style="width:60px">, <input type="number" placeholder="y0" id="y0" style="width:60px"> 
+			<button onclick="resultado(a,b,c,x0,y0)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+
+			<a href="https://brasilescola.uol.com.br/matematica/distancia-entre-ponto-reta.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+			
+		</div>
+		
+		
+		
+	</main>
+  
+	
+	<footer>
+		<img src="../../imagens/logo.png">
+		<div id="txtFooter">
+			<p>
+				Pitagórico versão 0.3
+			</p>
+				
+			<a href="../../quemsomos.html" id="txtFooter">
+				Quem somos
+			</a>
+			
+			<p>
+				ETEC Bento Quirino 2022
+			</p>
+		</div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+
+	<script>
+	
+	
+	function resultado(a,b,c,x0,y0){
+        var a = parseFloat(document.getElementById("a").value);
+        var b = parseFloat(document.getElementById("b").value);
+		var c = parseFloat(document.getElementById("c").value);
+        var x0 = parseFloat(document.getElementById("x0").value);
+        var y0 = parseFloat(document.getElementById("y0").value);
+        var res = document.getElementById("resultado");
+        res.innerHTML = "Distância: "+distPontoReta(a,b,c,x0,y0)+" u";
+    }</script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Reta paralela</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html"> <img src="../../imagens/logo.png"> </a>
+		</nav>
+		<div id="caminho">
+			<a href="../../matematica.html" id="caminho"> Matemática </a>/<a href="../geoanalitica.html" id="caminho"> Geometria Analítica </a>
+		</div>
+	</header>
+	
+	<main>
+		<h1>RETA PARALELA</h1>
+		
+		<div id="calc">
+		
+                <h4> Requisitos</h4>
+
+                Geometria Plana <br>
+                Álgebra
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Two_parallel_lines_a_b.svg/800px-Two_parallel_lines_a_b.svg.png" width="200px"> <br>
+			Retas paralelas são aquelas que estão no mesmo plano, mas não possuem nenhum ponto em comum e não se cruzam. Isso significa que essas retas possuem também o mesmo coeficiente angular (o "m" em
+			y = mx+n). Duas retas r e s são representadas como paralelas através do símbolo //. Então r//s significa "reta r paralela à reta s". <br> <br>
+			Quando se considera uma determinada reta, existem infinitas retas paralelas à ela. Porém, quando se fornece uma restrição de que a reta paralela também deve passar por um determinado ponto, é possível
+			calcular essa reta com exatidão. Considerando uma reta y = mx+n e um ponto genérico (x₀, y₀), para descobrir qual é a reta paralela que passa pelo ponto, deve-se fazer: <br> <br>
+			y₀ = m*x₀ + Ns <br> <br>
+
+			Depois, isola-se o Ns e ele será "recolocado" na equação original, substituindo o lugar do n.
+
+			
+
+		</div>
+
+		<div id="calc">
+			Equação da reta: y = <input type="number" placeholder="m" id="m" style="width:60px">x + <input type="number" placeholder="n" id="n" style="width:60px"> <br>
+	     	Coordenadas do ponto: <input type="number" placeholder="x₀" id="x" style="width:60px">, <input type="number" placeholder="y₀" id="y" style="width:60px"> 
+			<button onclick="resultado(m,n,x,y)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://www.todamateria.com.br/retas-paralelas/"> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/matematica/retas-paralelas.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+		</div>
+		
+		
+		
+	</main>
+  
+	
+	<footer>
+		<img src="../../imagens/logo.png">
+		<div id="txtFooter">
+			<p>
+				Pitagórico versão 0.3
+			</p>
+				
+			<a href="../../quemsomos.html" id="txtFooter">
+				Quem somos
+			</a>
+			
+			<p>
+				ETEC Bento Quirino 2022
+			</p>
+		</div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+
+	<script>
+	
+	function resultado(m,n,x,y){
+        var m = parseFloat(document.getElementById("m").value);
+        var n = parseFloat(document.getElementById("n").value);
+		var x = parseFloat(document.getElementById("x").value);
+        var y = parseFloat(document.getElementById("y").value);
+        var res = document.getElementById("resultado");
+        res.innerHTML = retaParalelaReduzida(m,x,y);
+    }</script>
+    
+
+</body>
+
+</html>

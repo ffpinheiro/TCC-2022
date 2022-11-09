@@ -1,0 +1,112 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Alinhamento de 3 pontos</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html"> <img src="../../imagens/logo.png"> </a>
+		</nav>
+		<div id="caminho">
+			<a href="../../matematica.html" id="caminho"> Matemática </a>/<a href="../geoanalitica.html" id="caminho"> Geometria Analítica </a>
+		</div>
+	</header>
+	
+	<main>
+		<h1>ALINHAMENTO DE 3 PONTOS</h1>
+		
+		<div id="calc">
+		
+                <h4> Requisitos</h4>
+
+                Geometria Plana <br>
+                Álgebra <br>
+                Matrizes
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+			Quando são escolhidos 3 pontos em um plano cartesiano, existem 2 possibilidades: ou os pontos são colineares, sendo todos parte de uma reta, ou eles não são colineares, formando um triângulo.
+            É possível, a partir das coordenadas dos 3 pontos, determinar qual dos 2 casos é verdadeiro. Para isso, é feita uma matriz 3x3 com as coordenadas dos pontos nas 2 primeiras colunas, e a última coluna
+            é preenchida de 1s. <br> <br>
+            <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c288afd83384b49e8d00f5514ce0ea587aef088b"> <br> <br>
+            Caso o determinante da matriz seja igual a 0, então os pontos são colineares. Caso contrário, eles formam um triângulo. Como revisão, aqui está o cálculo do determinante de uma matriz 3x3: <br> <br>
+            <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8db9eefb6b00e9b8260808b7f23afb78b7c1bd37"> <br> <br>
+            Que é equivalente a: <br>
+            <img src="https://matematicabasica.net/wp-content/uploads/2019/02/matriz-a-regra-de-sarrus-3.png" width="350px"> <br> <br>
+
+            Quando os pontos formam um triângulo, é possível calcular a área desse triângulo através da simples fórmula: <br> <br>
+
+            <img src="../../imagens/determinante.png"><br>
+            Onde |D| é o determinante
+
+		</div>
+
+		<div id="calc">
+			Ponto A: <input type="number" placeholder="x1" id="xa" style="width:60px">, <input type="number" placeholder="y1" id="ya" style="width:60px"> <br>
+			Ponto B: <input type="number" placeholder="x2" id="xb" style="width:60px">, <input type="number" placeholder="y2" id="yb" style="width:60px"> <br>
+            Ponto C: <input type="number" placeholder="x3" id="xc" style="width:60px">, <input type="number" placeholder="y3" id="yc" style="width:60px"> <br> <br>
+			<button onclick="resultado(xa,ya,xb,yb,xc,yc)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+			<a href="https://brasilescola.uol.com.br/matematica/condicao-alinhamento-tres-pontos-2.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+			
+		</div>
+		
+		
+		
+	</main>
+  
+	
+	<footer>
+		<img src="../../imagens/logo.png">
+		<div id="txtFooter">
+			<p>
+				Pitagórico versão 0.3
+			</p>
+				
+			<a href="../../quemsomos.html" id="txtFooter">
+				Quem somos
+			</a>
+			
+			<p>
+				ETEC Bento Quirino 2022
+			</p>
+		</div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+
+	<script> 
+    function resultado(p1,p2,q1,q2){
+        var xa = parseFloat(document.getElementById("xa").value);
+        var ya = parseFloat(document.getElementById("ya").value);
+		var xb = parseFloat(document.getElementById("xb").value);
+        var yb = parseFloat(document.getElementById("yb").value);
+        var xc = parseFloat(document.getElementById("xc").value);
+        var yc = parseFloat(document.getElementById("yc").value);
+
+        var res = document.getElementById("resultado");
+        res.innerHTML = alinhamentoPontos(xa,ya,xb,yb,xc,yc);
+    }</script>
+    
+
+</body>
+
+</html>

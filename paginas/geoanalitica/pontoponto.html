@@ -1,0 +1,108 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Distância entre dois pontos</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<a href="../../index.html"> <img src="../../imagens/logo.png"> </a>
+		</nav>
+		<div id="caminho">
+			<a href="../../matematica.html" id="caminho"> Matemática </a>/<a href="../geoanalitica.html" id="caminho"> Geometria Analítica </a>
+		</div>
+	</header>
+	
+	<main>
+		<h1>DISTÂNCIA ENTRE DOIS PONTOS</h1>
+		
+		<div id="calc">
+		
+                <h4> Requisitos</h4>
+
+                Geometria Plana <br>
+                Álgebra
+			
+		</div>
+
+        <div id="calc">
+			<h4>Definição</h4>
+			A distância entre dois pontos, como o nome sugere, é o menor caminho entre dois pontos dentro do plano cartesiano. É um dos conceitos primordiais da geometria analítica, servindo de base para muitos outros
+            cálculos. Para calcular a distância entre dois pontos, é necessário considerar o eixo das abscissas (x) e o das ordenadas (y). Como dois pontos podem estar em posições diferentes dentro de cada um desses
+            eixos, é preciso considerar ambos no cálculo da distância. <br> <br>
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Distance_Formula.svg/1280px-Distance_Formula.svg.png" width="350px"> <br> <br>
+
+            A partir da imagem, é possível reparar que a distância entre os pontos será a hipotenusa de um triângulo formado pelas diferenças da posição nos eixos dos dois pontos. Portanto, é utilizado o teorema de
+            Pitágoras para calcular a distância, considerando os catetos como (x₂-x₁) e (y₂-y₁). Considerando 2 pontos, P (P1, P2) e Q (Q1, Q2), a fórmula é então: <br> <br>
+
+            <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2e0c9ce1b3455cb9e92c6bad6684dbda02f69c82">
+
+
+		</div>
+
+		<div id="calc">
+			Ponto P: <input type="number" placeholder="p1" id="p1" style="width:60px">, <input type="number" placeholder="p2" id="p2" style="width:60px"> <br>
+			Ponto Q: <input type="number" placeholder="q1" id="q1" style="width:60px">, <input type="number" placeholder="q2" id="q2" style="width:60px"> 
+			<button onclick="resultado(p1,p2,q1,q2)"> Calcular </button>
+			<br>
+		
+			<div id="resultado"> </div>
+		</div>
+
+     
+		
+
+		<div id="calc">
+			<h4>Veja mais em</h4>
+            
+
+			<a href="https://www.todamateria.com.br/distancia-entre-dois-pontos/"> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/matematica/distancia-entre-dois-pontos.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+			<a href="https://www.infoescola.com/matematica/plano-cartesiano/#distancia-entre-pontos"> <img src="../../imagens/infoescola.png" id="logo"> </a>
+		</div>
+		
+		
+		
+	</main>
+  
+	
+	<footer>
+		<img src="../../imagens/logo.png">
+		<div id="txtFooter">
+			<p>
+				Pitagórico versão 0.3
+			</p>
+				
+			<a href="../../quemsomos.html" id="txtFooter">
+				Quem somos
+			</a>
+			
+			<p>
+				ETEC Bento Quirino 2022
+			</p>
+		</div>
+	</footer>
+
+
+    <script src="../../library.js"></script>
+
+	<script>
+	
+	function resultado(p1,p2,q1,q2){
+        var p1 = parseFloat(document.getElementById("p1").value);
+        var p2 = parseFloat(document.getElementById("p2").value);
+		var q1 = parseFloat(document.getElementById("q1").value);
+        var q2 = parseFloat(document.getElementById("q2").value);
+        var res = document.getElementById("resultado");
+        res.innerHTML = "Distância: "+distPontoPonto(p1,p2,q1,q2)+" u";
+    }</script>
+    
+
+</body>
+
+</html>

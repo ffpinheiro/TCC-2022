@@ -21,23 +21,22 @@
 		<h1>Progressão Aritmética</h1>
 		
 		<div id="calc">
-			Requisitos:
-			
-				<a href="#" class="indice">Requisitos</a>
-				<a href="#" class="indice">índice</a>
-				<a href="#" class="indice">índice</a>
-				<a href="#" class="indice">índice</a>
+			<h4>Requisitos </h4>
+				
+			<h4>Usos</h4>
 			
 		</div>
 
 		<div id="calc">
-			r: <input type="number" placeholder="razão" id="r">
+			r: <input type="number" placeholder="razão" id="r" onchange="Calcular()">
 			<br>
-			a1:<input type="number" placeholder="a1 (primeiro termo)" id="a1" onfocusout="Calcular()">
+			a1:<input type="number" placeholder="a1 (primeiro termo)" id="a1" onchange="Calcular()">
 			<br>
 			a2:<input type="number" placeholder="a2 (segundo termo)" id="a2">
 			<br>
 			a3:<input type="number" placeholder="a3 (terceiro termo)" id="a3">
+
+			<div id="resultado"> aaaaaaaaaa</div>
 		</div>
 
 		<div id="calc">
@@ -51,9 +50,11 @@
 
 		<div id="calc">
 			<h4>Veja mais em:</h4>
+
+			<a href="https://www.todamateria.com.br/progressao-aritmetica/"> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/matematica/progressoes-aritmeticas.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+			<a href="https://www.infoescola.com/matematica/progressao-aritmetica/"> <img src="../../imagens/infoescola.png" id="logo"> </a>
 		</div>
-		
-		<img src="../../imagens/PA.svg">
 		
 	</main>
 
@@ -83,6 +84,9 @@
 
 			a2 = a1 + r;
 			a3 = a1 + 2*r;
+
+			// array{a2, a3};
+			//resultado = 'a2:'  a2 + '<br>' + 'a3:' + a3 ;
 
 			document.getElementById('a2').value = a2;
 			document.getElementById('a3').value = a3;

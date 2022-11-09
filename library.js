@@ -708,8 +708,9 @@ function distPontoPonto(x1,x2,y1,y2){
 
 
 function baricentroTriangulo(xa,ya,xb,yb,xc,yc){
-  return (xa+xb+xc/3)+", "+(ya+yb+yc/3);
+  return ((xa+xb+xc)/3)+", "+((ya+yb+yc)/3);
 }
+
 
 // GEOMETRIA ANALITICA DE CIRCUNFERENCIA (EQUACAO DA CIRCUNFERENCIA, POSICAO RELATIVA ENTRE PONTO E CIRCUNFERENCIA, RETA E CIRCUNFERENCIA E 2 CIRCUNFERENCIAS)
 

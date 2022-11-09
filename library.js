@@ -27,14 +27,13 @@
   */
  }
  
- function enesimoTermoPG(ak,n,q,k){
-   return ak*Math.pow(q,(n-k));
+ function enesimoTermoPG(a1,n,q){
+   return a1*Math.pow(q,(n-1));
 
    /*
-   ak = kesimo termo
+   a1 = primeiro termo
    q = razao
    n = posicao do termo a ser descoberto
-   k = posicao do kesimo termo
    */
  }
 

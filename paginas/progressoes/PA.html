@@ -18,43 +18,61 @@
 	</header>
 	
 	<main>
-		<h1>Progressão Aritmética</h1>
+		<h1>PROGRESSÃO ARITMÉTICA</h1>
 		
 		<div id="calc">
 			<h4>Requisitos </h4>
-				
-			<h4>Usos</h4>
+			
+			Aritmética
 			
 		</div>
 
-		<div id="calc">
-			r: <input type="number" placeholder="razão" id="r" onchange="Calcular()">
-			<br>
-			a1:<input type="number" placeholder="a1 (primeiro termo)" id="a1" onchange="Calcular()">
-			<br>
-			a2:<input type="number" placeholder="a2 (segundo termo)" id="a2">
-			<br>
-			a3:<input type="number" placeholder="a3 (terceiro termo)" id="a3">
 
-			<div id="resultado"> aaaaaaaaaa</div>
+		<div id="calc">
+			<h4> Definição </h4>
+	
+			Uma progressão aritmética (abreviadamente, PA) é uma sequência numérica em que cada termo, a partir do segundo, é igual à soma do termo anterior com uma constante r. O número r é chamado de razão ou diferença comum da progressão aritmética.
+			Cada um dos termos é identificado pela sua respectiva posição, e para representar um termo utilizamos a letra "a" seguida da posição do termo. <br> <br>
+			Exemplo: considere uma PA com 6 termos, tendo razão = 3 e a<sub>1</sub> = 2. Temos que a diferença entre cada termo é igual a 3 e o primeiro termo é 2. Portanto: <br>
+
+			2, 5, 8, 11, 14, 17 <br> <br>
+
+			É possível classificar uma PA em 3 tipos conforme sua razão: <br>
+			<center> <img src="../../imagens/PA.svg" width="700px"> </center> <br>
+
+			Para calcular o enésimo termo de uma PA a partir de seu 1º termo, utilizamos a seguinte fórmula: <br> <br>
+			<img src="../../imagens/termo_geralA1.svg"> <br>
+			Onde a<sub>1</sub> é o primeiro termo, a<sub>n</sub> é o termo a ser descoberto e r é a razão. <br> <br>
+
+			Podemos generalizar essa fórmula começando com qualquer termo de qualquer posição, trocando o 1 por m: <br> <br>
+			<img src="../../imagens/termo_geral.svg"> <br> <br>
+
+			Outro cálculo que pode ser realizado é a soma dos n primeiros termos de uma PA. <br> <br>
+
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b71ceff79c3308ec399a7c8fde67b235e1df1e5e">
 		</div>
 
 		<div id="calc">
-			<h2>Fórmula do termo geral:</h2>
-			<img src="../../imagens/termo_geralA1.svg">
-			<br>
-			<img src="../../imagens/termo_geral.svg">
-			<br>
-			Uma progressão aritmética (abreviadamente, P. A.) é uma sequência numérica em que cada termo, a partir do segundo, é igual à soma do termo anterior com uma constante r. O número r é chamado de razão ou diferença comum da progressão aritmética.
+			Razão: <input type="number" placeholder="r" id="r">	<br>
+
+			Primeiro termo: <input type="number" placeholder="a1" id="a1">	<br>
+
+			Posição do termo a ser descoberto: <input type="number" placeholder="an" id="an"> <br>
+			<button onclick="Calcular()"> Calcular </button>
+
+			<div id="resultado"></div>
 		</div>
 
 		<div id="calc">
-			<h4>Veja mais em:</h4>
+			<h4>Veja mais em</h4>
+            
 
 			<a href="https://www.todamateria.com.br/progressao-aritmetica/"> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
 			<a href="https://brasilescola.uol.com.br/matematica/progressoes-aritmeticas.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
-			<a href="https://www.infoescola.com/matematica/progressao-aritmetica/"> <img src="../../imagens/infoescola.png" id="logo"> </a>
+			<a href="https://www.infoescola.com/matematica/progressao-aritmetica/"> <img src="../../imagens/infoescola.png" id="logo"></a>
+			
 		</div>
+		
 		
 	</main>
 
@@ -75,18 +93,21 @@
 		</div>
 	</footer>
 
+	<script src="../../library.js"></script>
+
 	<script>
 		function Calcular() {
+			var res = document.getElementById("resultado");
 			let r = Number(document.getElementById('r').value);
 			let a1 = Number(document.getElementById('a1').value);
-			let a2 = Number(document.getElementById('a2').value);
-			let a3 = Number(document.getElementById('a3').value);
+			let an = Number(document.getElementById('an').value);
+		
+			let a2 = a1 + r;
+			let a3 = a1 + 2*r;
+			let a4 = a1 + 3*r;
+			let a5 = a1 + 4*r;
 
-			a2 = a1 + r;
-			a3 = a1 + 2*r;
-
-			document.getElementById('a2').value = a2;
-			document.getElementById('a3').value = a3;
+			res.innerHTML = "A PA é: "+a1+", "+a2+", "+a3+", "+a4+", "+a5+"..."+"<br><br> O "+an+"° termo é igual a "+enesimoTermoPA(a1,an,r);
 		}
 	</script>
 

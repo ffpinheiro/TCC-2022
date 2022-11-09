@@ -18,37 +18,61 @@
 	</header>
 	
 	<main>
-		<h1>Tema</h1>
-		<br>
+		<h1>PROGRESSÃO GEOMÉTRICA</h1>
 		
 		<div id="calc">
+			<h4>Requisitos </h4>
+			
+			Aritmética
 			
 		</div>
 
+
 		<div id="calc">
-			Requisitos:
-			<ul>
-				<li><a href="#" class="indice">Requisitos</a></li>
-				<li><a href="#" class="indice">índice</a></li>
-				<li><a href="#" class="indice">índice</a></li>
-				<li><a href="#" class="indice">índice</a></li>
-			</ul>
+			<h4> Definição </h4>
+	
+			Uma progressão geométrica (abreviadamente, PG), semelhante a progressão aritmética, é uma sequência numérica em que cada termo, a partir do segundo, é igual à multiplicação do termo anterior com uma constante q. O número q é chamado de razão ou quociente comum da progressão geométrica.
+			Cada um dos termos é identificado pela sua respectiva posição, e para representar um termo utilizamos a letra "a" seguida da posição do termo. <br> <br>
+			Exemplo: considere uma PG com 5 termos, tendo razão = 2 e a<sub>1</sub> = 2. Temos que o quociente entre cada termo é igual a 2 e o primeiro termo é 2. Portanto: <br>
+
+			2, 4, 8, 16, 32 <br> <br>
+
+			É possível classificar uma PG em 5 tipos conforme sua razão: <br> <br>
+			<center> <img src="../../imagens/PG.jpg" width="500px"> </center> <br>
+
+			Para calcular o enésimo termo de uma PG a partir de seu 1º termo, utilizamos a seguinte fórmula: <br> <br>
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/13ec23aee23e23bc70606b0cc9e574f5753768b4"> <br>
+			Onde a<sub>1</sub> é o primeiro termo, a<sub>n</sub> é o termo a ser descoberto e q é a razão. <br> <br>
+
+			Podemos generalizar essa fórmula começando com qualquer termo de qualquer posição, trocando o 1 por m: <br> <br>
+			<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4f3118e850fa53e3270d2198e611e73eea1f9fec">
 		</div>
 
-		<div id="texto">
-			<h4>Veja mais em:</h4>
+		<div id="calc">
+			Razão: <input type="number" placeholder="q" id="q">	<br>
 
+			Primeiro termo: <input type="number" placeholder="a1" id="a1">	<br>
+
+			Posição do termo a ser descoberto: <input type="number" placeholder="an" id="an"> <br>
+			<button onclick="Calcular()"> Calcular </button>
+
+			<div id="resultado"></div>
 		</div>
 
-		<div id="texto">
+		<div id="calc">
+			<h4>Veja mais em</h4>
             
-        </div>
+
+			<a href="https://www.todamateria.com.br/progressao-geometrica/"> <img src="../../imagens/todamateria.png" id="logo"></a> <br> <br>
+			<a href="https://brasilescola.uol.com.br/matematica/progressao-geometrica.htm"> <img src="../../imagens/brescola.png" id="logo"> </a> <br> <br>
+			<a href="https://www.infoescola.com/matematica/progressoes-geometricas/"> <img src="../../imagens/infoescola.png" id="logo"></a>
+			
+		</div>
 		
-		<img src="../../imagens/PA.svg">
 		
 	</main>
 
-    <footer>
+	<footer>
 		<img src="../../imagens/logo.png">
 		<div id="txtFooter">
 			<p>
@@ -65,8 +89,22 @@
 		</div>
 	</footer>
 
+	<script src="../../library.js"></script>
+
 	<script>
+		function Calcular() {
+			var res = document.getElementById("resultado");
+			let q = Number(document.getElementById('q').value);
+			let a1 = Number(document.getElementById('a1').value);
+			let an = Number(document.getElementById('an').value);
 		
+			let a2 = a1*q;
+			let a3 = a1*q*q;
+			let a4 = a1*q*q*q;
+			let a5 = a1*q*q*q*q;
+
+			res.innerHTML = "A PG é: "+a1+", "+a2+", "+a3+", "+a4+", "+a5+"..."+"<br><br> O "+an+"° termo é igual a "+enesimoTermoPG(a1,an,q);
+		}
 	</script>
 
 </body>

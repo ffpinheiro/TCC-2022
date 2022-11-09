@@ -492,12 +492,17 @@ Desvio padrao = sqrt(variancia)
 
  // ANALISE COMBINATORIA (FATORIAL, COMBINACAO, ARRANJO E PERMUTACAO) ----------------------------------------------------------------------------------------------------------------------------------------------------------------
  
- function fat(num) {
+function fat(num) {
+
+  if(num == 0){
+    return 1;
+  }else{
     
       for (var i = num - 1; i >= 1; i--) {
       num *= i;
     }
     return(num);
+  }
   }
 
   

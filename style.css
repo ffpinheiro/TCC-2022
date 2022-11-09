@@ -19,6 +19,21 @@ nav{
     border-bottom: 5px solid #253F89;
 }
 
+div#caminho{
+    margin: 0px;
+    border-radius: 0px;
+    background-color: #253F89;
+    color: #fff;
+}
+
+a#caminho{
+    color: #fff;
+}
+
+a#caminho:hover{
+    text-decoration: underline;
+}
+
 main{
     text-align: center;
     margin-top: 5%;
@@ -74,21 +89,6 @@ div#resultado2,div#resultadov,div#resultadoa,div#resultadof,div#resultado3,div#r
 div#materias:hover{
     background-color: #253F89;
     color: #fff;
-}
-
-div#caminho{
-    margin: 0px;
-    border-radius: 0px;
-    background-color: #253F89;
-    color: #fff;
-}
-
-a#caminho{
-    color: #fff;
-}
-
-a#caminho:hover{
-    text-decoration: underline;
 }
 
 a{

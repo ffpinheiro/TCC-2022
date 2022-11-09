@@ -3,6 +3,7 @@
 	<meta charset="UTF-8">
 	<title>Página Inicial</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<style>
 		body{
 			background: linear-gradient(#A2B3E2, #fff, #fff);
@@ -46,13 +47,12 @@
 </head>
 <body>
 
-	<!--<header>
-		<nav>
-            <a href="matematica.html">matemática</a>
-            <a href="">física</a>
-            <a href="">química</a>
-		</nav>
-	</header>-->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+	  AOS.init({
+		duration: 1000
+	  });
+	</script>
 
 	<main>
 		<div id="logoInicial"> <img src="./imagens/logo.png" id="logoInicial"> </div>
@@ -65,14 +65,14 @@
 		</div>
 
 		
-			<h3> Recomendações de sites para estudos </h3>
-			<div id="rec">
+			<h1 data-aos="fade-up"> Recomendações de sites para estudos </h1>
+			<div id="rec" data-aos="fade-up">
 				<a href="https://brasilescola.uol.com.br/"> <img src="./imagens/brescola.png" id="rec"> </a>
 				<a href="https://blogdoenem.com.br/"> <img src="./imagens/blogdoENEM.png" id="rec"> </a>
 				<a href="https://mundoeducacao.uol.com.br/"> <img src="./imagens/mundoEducacao.png" id="rec"> </a>
 				<a href="https://www.todamateria.com.br/"> <img src="./imagens/todamateria.png" id="rec"> </a>
 			</div>
-			<div id="rec">
+			<div id="rec" data-aos="fade-up">
 				<a href="https://guiadoestudante.abril.com.br/"> <img src="./imagens/guiadoestudante.png" id="rec"> </a>
 				<a href="https://www.khanacademy.org/"> <img src="./imagens/khanAcademy.jpeg" id="rec"> </a>
 				<a href="https://www.infoescola.com/"> <img src="./imagens/infoescola.png" id="rec"> </a>

@@ -641,14 +641,12 @@ function comprimentoArco(alfa, r){
   return Math.sqrt(Math.pow(b,2)+Math.pow(c,2));
 }
  
- function distPontoPonto(x1,x2,y1,y2){
+function distPontoPonto(x1,x2,y1,y2){
 
-  let distancia = Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
+  let distancia = Math.sqrt(Math.pow((x2-y2),2)+Math.pow((x1-y1),2));
   let pontomedio = ((x1+x2)/2)+", "+(y1+y2)/2;
-  let declive = (y2-y1)/(x2-x1);
-  let angulo = Math.atan(declive)*(180/Math.PI);
 
-  return ("Distância: "+distancia+"<br> Ponto Médio: "+pontomedio+"<br> Declive: "+declive+"<br> Ângulo: "+angulo+"°");
+  return (distancia);
  }
 
 

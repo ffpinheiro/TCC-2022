@@ -113,7 +113,7 @@
 		var xb = parseFloat(document.getElementById("xb").value);
         var yb = parseFloat(document.getElementById("yb").value);
         var res = document.getElementById("resultado");
-        res.innerHTML = "Reta: "+arredondar(equacaoReta2Pontos(xa,ya,xb,yb));
+        res.innerHTML = "Reta: "+equacaoReta2Pontos(xa,ya,xb,yb);
     }
     </script>
     
@@ -123,7 +123,7 @@
         var y1 = parseFloat(document.getElementById("y1").value);
         var m =  parseFloat(document.getElementById("m").value);
         var res2 = document.getElementById("resultado2");
-        res2.innerHTML = arredondar(equacaoReta1Ponto1Angulo(x1,y1,m));
+        res2.innerHTML = equacaoReta1Ponto1Angulo(x1,y1,m);
         }
     </script>
 

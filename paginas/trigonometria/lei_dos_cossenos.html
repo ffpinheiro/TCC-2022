@@ -81,7 +81,7 @@
 			let b = parseInt(document.getElementById("b").value); 
 			let c = parseInt(document.getElementById('c').value);
 			let A = parseInt(document.getElementById('A').value);
-			let a = leiCossenos(10,8,50);
+			let a = leiCossenos(b,c,A);
 			let resultado = document.getElementById('resultado');
 			resultado.innerHTML = "O valor do lado restante é "+Math.round(a * 100) / 100+" u";
 		}

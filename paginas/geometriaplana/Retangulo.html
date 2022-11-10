@@ -100,7 +100,7 @@
         var a = parseFloat(document.getElementById("a").value);
 		var b = parseFloat(document.getElementById("b").value);
         var res = document.getElementById("resultado");
-        res.innerHTML = "Perímetro: "+(2*(a+b))+" u <br> <br> Área: "+areaRetangulo(a,b)+" u²"+"<br> <br> Diagonal: "+Math.hypot(a,b)+" u";
+        res.innerHTML = "Perímetro: "+(2*(a+b))+" u <br> <br> Área: "+areaRetangulo(a,b)+" u²"+"<br> <br> Diagonal: "+arredondar(Math.hypot(a,b))+" u";
     }</script>
     
 

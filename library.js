@@ -1,5 +1,8 @@
 
  var res = document.getElementById("resultado");
+ function arredondar(x){
+  return Math.round(x * 100) /100;
+ }
 
  // ALGEBRA LINEAR -----------------------------------------------------------------------------------------------------------------------------------------------
 

@@ -113,7 +113,7 @@
         var k = parseFloat(document.getElementById("k").value);
         var p = parseFloat(document.getElementById("p").value);
         var res = document.getElementById("resultado");
-        res.innerHTML = "Probabilidade: "+probBinomial(n,k,p)+" ou "+probBinomial(n,k,p)*100+"%";
+        res.innerHTML = "Probabilidade: "+arredondar(probBinomial(n,k,p))+" ou "+arredondar(probBinomial(n,k,p))*100+"%";
     }</script>
     
 

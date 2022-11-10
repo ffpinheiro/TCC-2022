@@ -109,9 +109,9 @@
 		var res2 = document.getElementById("resultado2");
 		var res3 = document.getElementById("resultado3");
 
-        res.innerHTML = "Área da Base: "+areaCirculo(r)+" u²";
-		res2.innerHTML = "Área Total: "+areaCone(h,r)+" u²";
-		res3.innerHTML = "Volume: "+volumePiramide(areaCirculo(r),h)+ " u³";
+        res.innerHTML = "Área da Base: "+arredondar(areaCirculo(r))+" u²";
+		res2.innerHTML = "Área Total: "+arredondar(areaCone(h,r))+" u²";
+		res3.innerHTML = "Volume: "+arredondar(volumePiramide(areaCirculo(r),h))+ " u³";
 
     }</script>
     

@@ -105,7 +105,7 @@
 	<script> function resultado(l){
         var l = parseFloat(document.getElementById("l").value);
         var res = document.getElementById("resultado");
-        res.innerHTML = "Perímetro: "+perimetroGeral(4,l)+" u <br><br> Área: "+areaQuadrado(l)+ " u² <br><br> Apótema: "+apotemaQuadrado(l)+" u <br> <br> Diagonal: "+Math.hypot(l,l)+" u";
+        res.innerHTML = "Perímetro: "+perimetroGeral(4,l)+" u <br><br> Área: "+areaQuadrado(l)+ " u² <br><br> Apótema: "+apotemaQuadrado(l)+" u <br> <br> Diagonal: "+arredondar(Math.hypot(l,l))+" u";
     }</script>
     
 

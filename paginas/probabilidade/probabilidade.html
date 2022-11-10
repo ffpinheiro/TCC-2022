@@ -116,7 +116,7 @@
         var a = parseFloat(document.getElementById("a").value);
         var s = parseFloat(document.getElementById("s").value);
         var res = document.getElementById("resultado");
-        res.innerHTML = "Probabilidade: "+probabilidade(a,s)+" ou "+probabilidade(a,s)*100+"%";
+        res.innerHTML = "Probabilidade: "+arredondar(probabilidade(a,s))+" ou "+arredondar(probabilidade(a,s)*100)+"%";
     }</script>
     
 

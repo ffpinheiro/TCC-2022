@@ -87,7 +87,7 @@
         var a = parseFloat(document.getElementById("a").value);
         var b = parseFloat(document.getElementById("b").value);
         var res = document.getElementById("resultado");
-        res.innerHTML = "Probabilidade: "+probUniao(a,b)+" ou "+probUniao(a,b)*100+"%";
+        res.innerHTML = "Probabilidade: "+arredondar(probUniao(a,b))+" ou "+arredondar(probUniao(a,b)*100)+"%";
     }</script>
     
 

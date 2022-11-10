@@ -102,7 +102,7 @@
 	<script> function resultado(a){
         var a = parseFloat(document.getElementById("a").value);
         var res = document.getElementById("resultado");
-        res.innerHTML = "Perímetro: "+perimetroGeral(3,a)+" u <br><br> Área: "+areaTriangEqui(a)+" u² <br><br>"+"Apótema: "+apotemaTriangulo(a)+" u";
+        res.innerHTML = "Perímetro: "+perimetroGeral(3,a)+" u <br><br> Área: "+arredondar(areaTriangEqui(a))+" u² <br><br>"+"Apótema: "+arredondar(apotemaTriangulo(a))+" u";
     }</script>
     
 

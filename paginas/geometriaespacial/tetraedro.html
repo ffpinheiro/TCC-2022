@@ -111,9 +111,9 @@
         var res4 = document.getElementById("resultado4");
         var Ab = areaTriangEqui(l);
 
-        res.innerHTML = "Área da Base: "+Ab+" u²";
+        res.innerHTML = "Área da Base: "+arredondar(Ab)+" u²";
 		res2.innerHTML = "Altura: "+arredondar(alturaTetraedro(l))+" u";
-        res3.innerHTML = "Área da Superfície: "+(Ab*4)+" u²";
+        res3.innerHTML = "Área da Superfície: "+arredondar((Ab*4))+" u²";
 		res4.innerHTML = "Volume: "+arredondar(volumeTetraedro(Ab,l))+ " u³";
 
     }</script>

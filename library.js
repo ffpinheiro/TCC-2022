@@ -682,7 +682,7 @@ function distPontoPonto(x1,x2,y1,y2){
 
 
  function equacaoReta1Ponto1Angulo(xa,ya,a){
-   return "y = "+tan(a)+"x + ("+(tan(a)*xa*-1+ya)+")";
+   return "y = "+arredondar(tan(a))+"x + ("+arredondar((arredondar(tan(a))*xa*-1+ya))+")";
  }
 
  function retaParalelaReduzida(m,x0,y0){

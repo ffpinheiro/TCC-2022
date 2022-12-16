@@ -120,3 +120,7 @@ div#calc{
 .pitagorico{
     width: 300px;
 }
+
+textarea{
+    width: 100%;
+}
